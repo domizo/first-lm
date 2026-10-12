@@ -2,7 +2,7 @@ import {expect,test} from '@playwright/test';
 import type {Page,TestInfo} from '@playwright/test';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-async function screenshot(page:Page,testInfo:TestInfo,name:string){const file=testInfo.outputPath(`${name}.png`);await page.screenshot({path:file,fullPage:true});await testInfo.attach(name,{path:file,contentType:'image/png'});}
+async function screenshot(page:Page,testInfo:TestInfo,name:string){const file=testInfo.outputPath(`${name}.png`);await page.evaluate(()=>window.scrollTo(0,0));await page.screenshot({path:file,fullPage:true});await testInfo.attach(name,{path:file,contentType:'image/png'});}
 async function goStep(page:Page,index:number){await page.locator('.workflow-nav button').nth(index).click();}
 async function expectNoOverflow(page:Page){expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();}
 test('recorded run: four steps, real inference, bilingual mobile, guide and JSON round trip',async({page},info)=>{
@@ -32,7 +32,7 @@ test('recorded run: four steps, real inference, bilingual mobile, guide and JSON
  await page.locator('input[type=file]').setInputFiles(downloaded!);await expect(page.getByText('Imported training run',{exact:true})).toBeVisible();await expect(page.locator('.import-notice')).toContainText('not authenticated');
  await page.locator('input[type=file]').setInputFiles({name:'bad.json',mimeType:'application/json',buffer:Buffer.from('{"schemaVersion":0}')});await expect(page.getByRole('alert')).toContainText('version 1 PyTorch');await page.getByRole('button',{name:'Dismiss error'}).click();
  await page.getByRole('button',{name:'JA',exact:true}).click();await goStep(page,2);await expect(page.locator('html')).toHaveAttribute('lang','ja');await screenshot(page,info,'train-desktop-ja');
- await page.setViewportSize({width:390,height:844});await expectNoOverflow(page);await screenshot(page,info,'train-mobile-ja');
+ await page.setViewportSize({width:390,height:844});await expectNoOverflow(page);await expect.poll(()=>page.locator('.loss-chart svg text').first().evaluate((node:SVGTextElement)=>parseFloat(getComputedStyle(node).fontSize)*(node.getScreenCTM()?.a??0))).toBeGreaterThanOrEqual(11);await expect(page.locator('.loss-chart svg')).toHaveAttribute('viewBox','0 0 350 250');await screenshot(page,info,'train-mobile-ja');
  for(const [index,name] of [[0,'dataset'],[1,'tokenize'],[3,'generate']] as const){await goStep(page,index);await expectNoOverflow(page);await screenshot(page,info,`${name}-mobile-ja`);}
  await page.getByRole('button',{name:'EN',exact:true}).click();await goStep(page,2);await screenshot(page,info,'train-mobile-en');await page.reload();await expect(page.locator('html')).toHaveAttribute('lang','en');expect(errors).toEqual([]);
 });
