@@ -2,7 +2,7 @@ import {useId} from 'react';
 import type {InputHTMLAttributes,ReactNode} from 'react';
 import {useI18n} from '../lib/i18n';
 export function Arrow(){return <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg>;}
-export function Field({label,hint,...props}:InputHTMLAttributes<HTMLInputElement>&{label:string;hint?:string}){const id=useId();return <label className="field" htmlFor={id}><span>{label}</span><input id={id} {...props}/>{hint&&<small>{hint}</small>}</label>;}
+export function Field({label,hint,...props}:InputHTMLAttributes<HTMLInputElement>&{label:string;hint?:string}){const id=useId(),labelId=`${id}-label`,hintId=`${id}-hint`;return <label className="field" htmlFor={id}><span id={labelId}>{label}</span><input id={id} {...props} aria-labelledby={labelId} aria-describedby={hint?hintId:undefined}/>{hint&&<small id={hintId}>{hint}</small>}</label>;}
 export function Fact({label,value}:{label:string;value:ReactNode}){return <div className="fact"><dt>{label}</dt><dd>{value}</dd></div>;}
 export function SectionHeader({title,aside}:{title:string;aside?:ReactNode}){return <div className="section-header"><h2>{title}</h2>{aside}</div>;}
 export function NextStep({onClick,label}:{onClick:()=>void;label:string}){return <button className="button primary" onClick={onClick}>{label}<Arrow/></button>;}

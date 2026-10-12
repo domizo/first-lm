@@ -4,6 +4,10 @@
 
 **62,064 パラメータの decoder-only Transformer** を Python / PyTorch で学習します。英語・日本語に切り替えられる React UI で「データ → 文字と ID → 学習 → 生成」を追えます。事前学習済みモデル、外部 AI API、有料 GPU は使いません。短い定型文に特化した教材であり、実用的なチャットボットではありません。
 
+![実際の学習記録を表示する first-lm](docs/screenshots/training-desktop.png)
+
+実際の Chromium 画面です。数値と生成文は保存した学習実行の結果を表示しています。
+
 ## 2つの動作モード
 
 - **ローカルで実際に学習**: Python サーバーを起動すると、ブラウザから CPU 学習・停止・保存・再開ができます

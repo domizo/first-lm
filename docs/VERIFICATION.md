@@ -9,6 +9,8 @@ Verified on the local CPU runtime used to build this project:
 - TypeScript check and production Vite build passed
 - Fresh-process recovery of an interrupted app-created run and rejection of a path-traversing latest-run pointer were independently checked
 
-Local interactive browser verification is not yet recorded here. Chromium launch in this execution sandbox fails with a socket permission error before any page opens. The shared cloud browser cannot reach this executor's loopback service. GitHub Actions browser tests and screenshots are being prepared to verify the exact source revision in a supported runtime. This limitation does not count as a browser pass.
+Local Chromium launch is blocked by this execution sandbox's socket permissions, so browser proof is produced by the exact-commit [GitHub Actions workflow](https://github.com/domizo/first-lm/actions/workflows/verify.yml). Its `first-lm-browser-proof` artifact contains desktop/mobile English/Japanese screenshots, the test report, and failure traces when relevant. Check the run associated with the source commit; a local sandbox limitation does not count as a browser pass.
+
+The browser suite exercises recorded-run navigation, real seeded inference, JSON import/export, initialization races, custom-corpus training, cancellation, reload and resumption. Screenshots come from that matching build. Owner-private hosting is deployed separately; authenticated hosted-session behavior has not been verified because its sign-in route was unavailable to the automated QA session. No authentication or access controls were bypassed.
 
 The bundle's metadata is not a cryptographic signature. The included reference run is tied to reproducible source and independently checked; arbitrary imported bundle claims are not authenticated.

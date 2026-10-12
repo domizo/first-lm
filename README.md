@@ -6,6 +6,10 @@ A real PyTorch decoder-only Transformer and a bilingual React learning lab. No p
 
 [日本語](README.ja.md) · [Learning guide](docs/GUIDE.md) · [Method and measurements](docs/METHOD.md)
 
+![The recorded training run in first-lm](docs/screenshots/training-desktop.png)
+
+Actual Chromium screenshot of the bundled measured run. Hosted mode is recorded-run exploration; local training requires the Python companion.
+
 ## Two honest execution modes
 
 - **Local training:** the Python companion serves the app on `127.0.0.1`. The browser controls real CPU training, cancellation, checkpoint saving and resumption.
