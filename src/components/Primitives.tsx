@@ -1,0 +1,9 @@
+import {useId} from 'react';
+import type {InputHTMLAttributes,ReactNode} from 'react';
+import {useI18n} from '../lib/i18n';
+export function Arrow(){return <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg>;}
+export function Field({label,hint,...props}:InputHTMLAttributes<HTMLInputElement>&{label:string;hint?:string}){const id=useId();return <label className="field" htmlFor={id}><span>{label}</span><input id={id} {...props}/>{hint&&<small>{hint}</small>}</label>;}
+export function Fact({label,value}:{label:string;value:ReactNode}){return <div className="fact"><dt>{label}</dt><dd>{value}</dd></div>;}
+export function SectionHeader({title,aside}:{title:string;aside?:ReactNode}){return <div className="section-header"><h2>{title}</h2>{aside}</div>;}
+export function NextStep({onClick,label}:{onClick:()=>void;label:string}){return <button className="button primary" onClick={onClick}>{label}<Arrow/></button>;}
+export function ConnectionNotice(){const {t}=useI18n();return <details className="connection-help"><summary>{t('How to run the local trainer','ローカル学習の始め方')}</summary><p>{t('From this project’s folder, build the interface and start the Python companion. Open the local address it prints. Training runs on your computer.','プロジェクトのフォルダで画面をビルドし、Python サーバーを起動してください。表示されたローカルアドレスを開くと、自分のコンピューターで学習できます。')}</p><code>npm run build<br/>.venv/bin/python -m model_lab serve</code><p>{t('See README for the one-time Python environment setup. This hosted page never sends training data to a remote service.','Python 環境の初回セットアップは README を参照してください。この公開ページから学習データを外部サービスに送信することはありません。')}</p></details>;}

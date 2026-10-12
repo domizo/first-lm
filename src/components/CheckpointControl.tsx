@@ -1,0 +1,4 @@
+import {useId} from 'react';
+import {useI18n} from '../lib/i18n';
+import type {RunBundle} from '../lib/types';
+export default function CheckpointControl({bundle,value,onChange,disabled=false}:{bundle:RunBundle;value:number;onChange:(v:number)=>void;disabled?:boolean}){const {t}=useI18n(),id=useId();return <div className="checkpoint-control"><label htmlFor={id}>{t('Checkpoint','チェックポイント')} <span>({t('optimizer steps','最適化ステップ')})</span></label><input id={id} type="range" min="0" max={bundle.checkpoints.length-1} value={value} step="1" onChange={e=>onChange(Number(e.target.value))} disabled={disabled} aria-valuetext={`${bundle.checkpoints[value]?.step} ${t('steps','ステップ')}`}/><div className="checkpoint-labels">{bundle.checkpoints.map((cp,i)=><button type="button" key={`${i}-${cp.step}`} onClick={()=>onChange(i)} disabled={disabled} className={value===i?'selected':''} aria-pressed={value===i}>{cp.step===0?t('Start','開始'):cp.step}</button>)}</div></div>;}

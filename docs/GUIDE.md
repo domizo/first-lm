@@ -1,0 +1,93 @@
+# A language model, from zero / ゼロから言語モデルを育てる
+
+## 1. Start with text / まず文章
+
+A language model predicts a next token from a context. Here a token is one Unicode code point, plus three reserved tokens: unknown, beginning of document and end of document. This choice makes the whole pipeline visible. It does not reproduce the efficient subword tokenization used by most large models.
+
+言語モデルは、文脈から次のトークンを予測します。この教材は Unicode のコードポイント単位で区切り、未知文字・文書の始まり・終わりの3種類を加えます。見通しをよくするための選択で、一般的な大規模モデルのトークン化と同じではありません。
+
+Try: open Dataset, inspect both partitions, then open Tokenize and enter `the cat` or `ねこは`. Add an emoji not in the vocabulary. It should become `<unk>` rather than silently expanding the vocabulary.
+
+試すこと: Dataset で学習用・検証用の文章を見て、Tokenize に `the cat` や `ねこは` を入力します。語彙にない絵文字を足すと、語彙が勝手に増えず `<unk>` になることを確認します。
+
+### Why split first? / なぜ先に分割する？
+
+Overlapping windows from the same document are strongly related. Randomly sending those windows to train and validation leaks near-identical context. This lab deduplicates exact documents, splits documents, builds the character vocabulary from training only, and then samples windows separately inside each document. The original templates remain related across splits, so this is still an easy toy task.
+
+同じ文書から作った重なり合う窓を訓練用・検証用へ振り分けると、ほぼ同じ文脈が両方に現れます。この教材は同一文書を除去し、文書を分割し、訓練側だけから語彙を作った後、それぞれの文書内で窓を取ります。ただし定型文の文型は両側で共通するため、依然として簡単な教材です。
+
+## 2. IDs become predictions / IDから予測へ
+
+1. A token ID selects a learned embedding vector
+2. A learned position embedding adds order information
+3. Causal self-attention combines available positions
+4. A feed-forward layer transforms those representations
+5. Repeat the block, normalize, and score each vocabulary item
+6. Softmax turns scores into probabilities
+
+1. トークン ID から学習可能な埋め込みベクトルを選ぶ
+2. 位置の埋め込みで順番を加える
+3. 因果的自己注意で参照できる位置の情報を組み合わせる
+4. 順伝播層で表現を変換する
+5. ブロックを繰り返し、正規化して各語彙のスコアを出す
+6. softmax で確率に変換する
+
+The model uses two pre-normalized attention blocks, four heads, 48-dimensional embeddings and a 48-token maximum context. Output projection shares the token embedding weights. There is no dropout in this small deterministic reference implementation. The total **62,064** is computed from actual parameters, not a marketing size label.
+
+このモデルは2層、4ヘッド、48次元、最大文脈48トークンです。出力層はトークン埋め込みの重みを共有します。この小さい参照実装には dropout を使いません。**62,064** はコードから集計した実際のパラメータ数です。
+
+### The causal mask / 因果マスク
+
+At position 3, positions 0–3 can contribute; position 4 cannot. The upper triangle of the score matrix is excluded before softmax. The model cannot see a future target during its prediction. A unit test changes future tokens and verifies earlier logits are unchanged.
+
+位置3では位置0〜3を参照でき、位置4は参照できません。スコア行列の上三角を softmax 前に除外します。未来の文字を変えても、それ以前の予測スコアが変わらないことをテストしています。
+
+A mask diagram is a structural explanation. Attention weights alone are not proof of why a model produced an answer. See [Jain & Wallace, 2019](https://aclanthology.org/N19-1357/) and [Wiegreffe & Pinter, 2019](https://aclanthology.org/D19-1002/) for different positions on attention interpretation.
+
+マスク図は構造を説明するものです。attention の重みだけで「この理由で答えた」と証明できるわけではありません。
+
+## 3. Train and measure / 学習して測る
+
+Training minimizes cross-entropy, the negative natural logarithm of the probability assigned to the actual next token. A confident correct prediction has low loss. A confident wrong one has high loss. Backpropagation computes gradients; AdamW updates the model. This is genuine optimization from seeded random initialization.
+
+学習では、正解の次トークンに割り当てた確率の負の自然対数を小さくします。逆伝播で勾配を求め、AdamW で重みを更新します。最初から学習済みの重みを利用しているのではなく、シード付きのランダム初期値から最適化します。
+
+The chart uses fixed sampled training/held-out windows, not the noisy current minibatch. Held-out windows never update the model. The bigram baseline only counts transitions from the preceding token, with additive smoothing. It is deliberately simple and useful: a complex model should demonstrate an actual advantage.
+
+グラフは、その時のミニバッチの値ではなく、固定した訓練用・検証用の窓で測ります。検証側は重みの更新に使いません。バイグラム基準は直前の1トークンから次のトークンを数えます。複雑なモデルの利点を確かめる比較対象です。
+
+Try: compare step 0, 200, 400 and 600. Notice that a lower loss does not guarantee every generated sentence improves. The saved English sample still changes animals and misspells a word. It is intentionally not cleaned up.
+
+試すこと: 0、200、400、600ステップを比べます。loss が下がっても、すべての生成文が改善するとは限りません。保存した英語のサンプルにも動物の入れ替わりや綴りの誤りがあり、そのまま残しています。
+
+## 4. Sample the next token / 次の文字を選ぶ
+
+- **Temperature:** rescales logits. Lower values concentrate probability; zero uses greedy argmax
+- **Top-k:** keeps only the k highest-scoring candidates. Zero keeps all allowed candidates
+- **Seed:** makes the pseudorandom sampling sequence repeatable
+- **Maximum new tokens:** caps the generation; end-of-document may stop it sooner
+
+- **Temperature:** スコアの分布を調整します。小さいほど集中し、0は最大値を選びます
+- **Top-k:** 上位 k 件だけを残します。0は候補を限定しません
+- **Seed:** サンプリングの疑似乱数列を再現します
+- **生成長:** 追加するトークン数の上限です。文書末尾を選ぶと早く終了します
+
+Beginning-of-document and unknown tokens are excluded from output sampling. The displayed probability bars are **after** temperature and top-k, for the first next token at the selected prompt/checkpoint. They are not raw training probabilities. Keep all settings and the prompt identical for pre/post comparisons.
+
+文書先頭と未知文字のトークンは出力候補から除外します。確率の棒グラフは、選択した入力とチェックポイントについて、temperature と top-k の処理**後**の最初の次トークンを示します。学習前後の比較では入力と設定をそろえます。
+
+## 5. Run a controlled experiment / 条件をそろえて実験
+
+Start a new local run to change dimensions, context or learning rate. Resumption continues the same experiment and therefore locks those settings. Cancel saves optimizer and RNG state; resuming under the same environment yields the same final weights as an uninterrupted run, as verified by tests.
+
+次元数・文脈長・学習率を変える場合は、新しい実験を始めます。再開は同じ実験の続きなので設定を固定します。停止時は optimizer と乱数状態も保存し、同じ環境での再開が連続実行と同じ重みになることをテストしています。
+
+A paired context test is included: the same 512 held-out target positions are evaluated at step 600 with context caps 8, 24 and 48. Results are 0.252, 0.191 and 0.195 nats/token respectively. More context was not monotonically better in this small sample. See [method](METHOD.md); do not treat these as broad benchmark scores.
+
+同じ512個の検証側ターゲットを、600ステップの重みと文脈上限8・24・48で測る実験も含めています。結果は順に0.252・0.191・0.195 nat/token で、文脈が長いほど必ずよいわけではありません。小さい教材上の結果であり、汎用ベンチマークではありません。
+
+## Next, not hidden inside this demo / 次の学習テーマ
+
+Subword tokenization (BPE), more varied licensed data, larger models, longer contexts and stronger evaluation are sensible next topics. They are not claimed as implemented here. BPE also changes the token unit, so its token loss should not be directly ranked against character-token loss. [Hugging Face's BPE explanation](https://huggingface.co/docs/course/en/chapter6/5) is a useful next reference.
+
+BPE、利用権を確認した多様なデータ、モデルの拡大、より厳密な評価は次のテーマです。この版で実装済みとはしていません。BPEではトークンの単位が変わるため、文字単位の loss とそのまま優劣を比べるのも適切ではありません。

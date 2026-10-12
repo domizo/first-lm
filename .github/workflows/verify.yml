@@ -1,0 +1,47 @@
+name: Verify first-lm
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install dependencies
+        run: |
+          npm ci
+          python -m pip install torch==2.9.1 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -r requirements-dev.txt
+          python -m pip install -e . --no-deps
+      - name: Type and inference checks
+        run: |
+          npm run check
+          npm test
+          npm run build
+      - name: Python training and safety tests
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Install browser
+        run: npx playwright install --with-deps chromium
+      - name: Browser workflow and real training checks
+        run: npm run test:e2e
+      - name: Save browser proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: first-lm-browser-proof
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14

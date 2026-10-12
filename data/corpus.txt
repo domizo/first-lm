@@ -1,0 +1,1151 @@
+the cat is in the garden. the cat sees a red ball. the cat is happy.
+
+ねこはにわにいます。ねこはあかいボールをみます。ねこはうれしいです。
+
+the cat is in the garden. the cat sees a red flower. the cat is happy.
+
+ねこはにわにいます。ねこはあかいはなをみます。ねこはうれしいです。
+
+the cat is in the garden. the cat sees a red leaf. the cat is happy.
+
+ねこはにわにいます。ねこはあかいはっぱをみます。ねこはうれしいです。
+
+the cat is in the forest. the cat sees a red ball. the cat is happy.
+
+ねこはもりにいます。ねこはあかいボールをみます。ねこはうれしいです。
+
+the cat is in the forest. the cat sees a red flower. the cat is happy.
+
+ねこはもりにいます。ねこはあかいはなをみます。ねこはうれしいです。
+
+the cat is in the forest. the cat sees a red leaf. the cat is happy.
+
+ねこはもりにいます。ねこはあかいはっぱをみます。ねこはうれしいです。
+
+the cat is in the house. the cat sees a red ball. the cat is happy.
+
+ねこはいえにいます。ねこはあかいボールをみます。ねこはうれしいです。
+
+the cat is in the house. the cat sees a red flower. the cat is happy.
+
+ねこはいえにいます。ねこはあかいはなをみます。ねこはうれしいです。
+
+the cat is in the house. the cat sees a red leaf. the cat is happy.
+
+ねこはいえにいます。ねこはあかいはっぱをみます。ねこはうれしいです。
+
+the cat is in the park. the cat sees a red ball. the cat is happy.
+
+ねこはこうえんにいます。ねこはあかいボールをみます。ねこはうれしいです。
+
+the cat is in the park. the cat sees a red flower. the cat is happy.
+
+ねこはこうえんにいます。ねこはあかいはなをみます。ねこはうれしいです。
+
+the cat is in the park. the cat sees a red leaf. the cat is happy.
+
+ねこはこうえんにいます。ねこはあかいはっぱをみます。ねこはうれしいです。
+
+the cat is in the garden. the cat sees a blue ball. the cat is happy.
+
+ねこはにわにいます。ねこはあおいボールをみます。ねこはうれしいです。
+
+the cat is in the garden. the cat sees a blue flower. the cat is happy.
+
+ねこはにわにいます。ねこはあおいはなをみます。ねこはうれしいです。
+
+the cat is in the garden. the cat sees a blue leaf. the cat is happy.
+
+ねこはにわにいます。ねこはあおいはっぱをみます。ねこはうれしいです。
+
+the cat is in the forest. the cat sees a blue ball. the cat is happy.
+
+ねこはもりにいます。ねこはあおいボールをみます。ねこはうれしいです。
+
+the cat is in the forest. the cat sees a blue flower. the cat is happy.
+
+ねこはもりにいます。ねこはあおいはなをみます。ねこはうれしいです。
+
+the cat is in the forest. the cat sees a blue leaf. the cat is happy.
+
+ねこはもりにいます。ねこはあおいはっぱをみます。ねこはうれしいです。
+
+the cat is in the house. the cat sees a blue ball. the cat is happy.
+
+ねこはいえにいます。ねこはあおいボールをみます。ねこはうれしいです。
+
+the cat is in the house. the cat sees a blue flower. the cat is happy.
+
+ねこはいえにいます。ねこはあおいはなをみます。ねこはうれしいです。
+
+the cat is in the house. the cat sees a blue leaf. the cat is happy.
+
+ねこはいえにいます。ねこはあおいはっぱをみます。ねこはうれしいです。
+
+the cat is in the park. the cat sees a blue ball. the cat is happy.
+
+ねこはこうえんにいます。ねこはあおいボールをみます。ねこはうれしいです。
+
+the cat is in the park. the cat sees a blue flower. the cat is happy.
+
+ねこはこうえんにいます。ねこはあおいはなをみます。ねこはうれしいです。
+
+the cat is in the park. the cat sees a blue leaf. the cat is happy.
+
+ねこはこうえんにいます。ねこはあおいはっぱをみます。ねこはうれしいです。
+
+the cat is in the garden. the cat sees a green ball. the cat is happy.
+
+ねこはにわにいます。ねこはみどりのボールをみます。ねこはうれしいです。
+
+the cat is in the garden. the cat sees a green flower. the cat is happy.
+
+ねこはにわにいます。ねこはみどりのはなをみます。ねこはうれしいです。
+
+the cat is in the garden. the cat sees a green leaf. the cat is happy.
+
+ねこはにわにいます。ねこはみどりのはっぱをみます。ねこはうれしいです。
+
+the cat is in the forest. the cat sees a green ball. the cat is happy.
+
+ねこはもりにいます。ねこはみどりのボールをみます。ねこはうれしいです。
+
+the cat is in the forest. the cat sees a green flower. the cat is happy.
+
+ねこはもりにいます。ねこはみどりのはなをみます。ねこはうれしいです。
+
+the cat is in the forest. the cat sees a green leaf. the cat is happy.
+
+ねこはもりにいます。ねこはみどりのはっぱをみます。ねこはうれしいです。
+
+the cat is in the house. the cat sees a green ball. the cat is happy.
+
+ねこはいえにいます。ねこはみどりのボールをみます。ねこはうれしいです。
+
+the cat is in the house. the cat sees a green flower. the cat is happy.
+
+ねこはいえにいます。ねこはみどりのはなをみます。ねこはうれしいです。
+
+the cat is in the house. the cat sees a green leaf. the cat is happy.
+
+ねこはいえにいます。ねこはみどりのはっぱをみます。ねこはうれしいです。
+
+the cat is in the park. the cat sees a green ball. the cat is happy.
+
+ねこはこうえんにいます。ねこはみどりのボールをみます。ねこはうれしいです。
+
+the cat is in the park. the cat sees a green flower. the cat is happy.
+
+ねこはこうえんにいます。ねこはみどりのはなをみます。ねこはうれしいです。
+
+the cat is in the park. the cat sees a green leaf. the cat is happy.
+
+ねこはこうえんにいます。ねこはみどりのはっぱをみます。ねこはうれしいです。
+
+the cat is in the garden. the cat sees a white ball. the cat is happy.
+
+ねこはにわにいます。ねこはしろいボールをみます。ねこはうれしいです。
+
+the cat is in the garden. the cat sees a white flower. the cat is happy.
+
+ねこはにわにいます。ねこはしろいはなをみます。ねこはうれしいです。
+
+the cat is in the garden. the cat sees a white leaf. the cat is happy.
+
+ねこはにわにいます。ねこはしろいはっぱをみます。ねこはうれしいです。
+
+the cat is in the forest. the cat sees a white ball. the cat is happy.
+
+ねこはもりにいます。ねこはしろいボールをみます。ねこはうれしいです。
+
+the cat is in the forest. the cat sees a white flower. the cat is happy.
+
+ねこはもりにいます。ねこはしろいはなをみます。ねこはうれしいです。
+
+the cat is in the forest. the cat sees a white leaf. the cat is happy.
+
+ねこはもりにいます。ねこはしろいはっぱをみます。ねこはうれしいです。
+
+the cat is in the house. the cat sees a white ball. the cat is happy.
+
+ねこはいえにいます。ねこはしろいボールをみます。ねこはうれしいです。
+
+the cat is in the house. the cat sees a white flower. the cat is happy.
+
+ねこはいえにいます。ねこはしろいはなをみます。ねこはうれしいです。
+
+the cat is in the house. the cat sees a white leaf. the cat is happy.
+
+ねこはいえにいます。ねこはしろいはっぱをみます。ねこはうれしいです。
+
+the cat is in the park. the cat sees a white ball. the cat is happy.
+
+ねこはこうえんにいます。ねこはしろいボールをみます。ねこはうれしいです。
+
+the cat is in the park. the cat sees a white flower. the cat is happy.
+
+ねこはこうえんにいます。ねこはしろいはなをみます。ねこはうれしいです。
+
+the cat is in the park. the cat sees a white leaf. the cat is happy.
+
+ねこはこうえんにいます。ねこはしろいはっぱをみます。ねこはうれしいです。
+
+the dog is in the garden. the dog sees a red ball. the dog is happy.
+
+いぬはにわにいます。いぬはあかいボールをみます。いぬはうれしいです。
+
+the dog is in the garden. the dog sees a red flower. the dog is happy.
+
+いぬはにわにいます。いぬはあかいはなをみます。いぬはうれしいです。
+
+the dog is in the garden. the dog sees a red leaf. the dog is happy.
+
+いぬはにわにいます。いぬはあかいはっぱをみます。いぬはうれしいです。
+
+the dog is in the forest. the dog sees a red ball. the dog is happy.
+
+いぬはもりにいます。いぬはあかいボールをみます。いぬはうれしいです。
+
+the dog is in the forest. the dog sees a red flower. the dog is happy.
+
+いぬはもりにいます。いぬはあかいはなをみます。いぬはうれしいです。
+
+the dog is in the forest. the dog sees a red leaf. the dog is happy.
+
+いぬはもりにいます。いぬはあかいはっぱをみます。いぬはうれしいです。
+
+the dog is in the house. the dog sees a red ball. the dog is happy.
+
+いぬはいえにいます。いぬはあかいボールをみます。いぬはうれしいです。
+
+the dog is in the house. the dog sees a red flower. the dog is happy.
+
+いぬはいえにいます。いぬはあかいはなをみます。いぬはうれしいです。
+
+the dog is in the house. the dog sees a red leaf. the dog is happy.
+
+いぬはいえにいます。いぬはあかいはっぱをみます。いぬはうれしいです。
+
+the dog is in the park. the dog sees a red ball. the dog is happy.
+
+いぬはこうえんにいます。いぬはあかいボールをみます。いぬはうれしいです。
+
+the dog is in the park. the dog sees a red flower. the dog is happy.
+
+いぬはこうえんにいます。いぬはあかいはなをみます。いぬはうれしいです。
+
+the dog is in the park. the dog sees a red leaf. the dog is happy.
+
+いぬはこうえんにいます。いぬはあかいはっぱをみます。いぬはうれしいです。
+
+the dog is in the garden. the dog sees a blue ball. the dog is happy.
+
+いぬはにわにいます。いぬはあおいボールをみます。いぬはうれしいです。
+
+the dog is in the garden. the dog sees a blue flower. the dog is happy.
+
+いぬはにわにいます。いぬはあおいはなをみます。いぬはうれしいです。
+
+the dog is in the garden. the dog sees a blue leaf. the dog is happy.
+
+いぬはにわにいます。いぬはあおいはっぱをみます。いぬはうれしいです。
+
+the dog is in the forest. the dog sees a blue ball. the dog is happy.
+
+いぬはもりにいます。いぬはあおいボールをみます。いぬはうれしいです。
+
+the dog is in the forest. the dog sees a blue flower. the dog is happy.
+
+いぬはもりにいます。いぬはあおいはなをみます。いぬはうれしいです。
+
+the dog is in the forest. the dog sees a blue leaf. the dog is happy.
+
+いぬはもりにいます。いぬはあおいはっぱをみます。いぬはうれしいです。
+
+the dog is in the house. the dog sees a blue ball. the dog is happy.
+
+いぬはいえにいます。いぬはあおいボールをみます。いぬはうれしいです。
+
+the dog is in the house. the dog sees a blue flower. the dog is happy.
+
+いぬはいえにいます。いぬはあおいはなをみます。いぬはうれしいです。
+
+the dog is in the house. the dog sees a blue leaf. the dog is happy.
+
+いぬはいえにいます。いぬはあおいはっぱをみます。いぬはうれしいです。
+
+the dog is in the park. the dog sees a blue ball. the dog is happy.
+
+いぬはこうえんにいます。いぬはあおいボールをみます。いぬはうれしいです。
+
+the dog is in the park. the dog sees a blue flower. the dog is happy.
+
+いぬはこうえんにいます。いぬはあおいはなをみます。いぬはうれしいです。
+
+the dog is in the park. the dog sees a blue leaf. the dog is happy.
+
+いぬはこうえんにいます。いぬはあおいはっぱをみます。いぬはうれしいです。
+
+the dog is in the garden. the dog sees a green ball. the dog is happy.
+
+いぬはにわにいます。いぬはみどりのボールをみます。いぬはうれしいです。
+
+the dog is in the garden. the dog sees a green flower. the dog is happy.
+
+いぬはにわにいます。いぬはみどりのはなをみます。いぬはうれしいです。
+
+the dog is in the garden. the dog sees a green leaf. the dog is happy.
+
+いぬはにわにいます。いぬはみどりのはっぱをみます。いぬはうれしいです。
+
+the dog is in the forest. the dog sees a green ball. the dog is happy.
+
+いぬはもりにいます。いぬはみどりのボールをみます。いぬはうれしいです。
+
+the dog is in the forest. the dog sees a green flower. the dog is happy.
+
+いぬはもりにいます。いぬはみどりのはなをみます。いぬはうれしいです。
+
+the dog is in the forest. the dog sees a green leaf. the dog is happy.
+
+いぬはもりにいます。いぬはみどりのはっぱをみます。いぬはうれしいです。
+
+the dog is in the house. the dog sees a green ball. the dog is happy.
+
+いぬはいえにいます。いぬはみどりのボールをみます。いぬはうれしいです。
+
+the dog is in the house. the dog sees a green flower. the dog is happy.
+
+いぬはいえにいます。いぬはみどりのはなをみます。いぬはうれしいです。
+
+the dog is in the house. the dog sees a green leaf. the dog is happy.
+
+いぬはいえにいます。いぬはみどりのはっぱをみます。いぬはうれしいです。
+
+the dog is in the park. the dog sees a green ball. the dog is happy.
+
+いぬはこうえんにいます。いぬはみどりのボールをみます。いぬはうれしいです。
+
+the dog is in the park. the dog sees a green flower. the dog is happy.
+
+いぬはこうえんにいます。いぬはみどりのはなをみます。いぬはうれしいです。
+
+the dog is in the park. the dog sees a green leaf. the dog is happy.
+
+いぬはこうえんにいます。いぬはみどりのはっぱをみます。いぬはうれしいです。
+
+the dog is in the garden. the dog sees a white ball. the dog is happy.
+
+いぬはにわにいます。いぬはしろいボールをみます。いぬはうれしいです。
+
+the dog is in the garden. the dog sees a white flower. the dog is happy.
+
+いぬはにわにいます。いぬはしろいはなをみます。いぬはうれしいです。
+
+the dog is in the garden. the dog sees a white leaf. the dog is happy.
+
+いぬはにわにいます。いぬはしろいはっぱをみます。いぬはうれしいです。
+
+the dog is in the forest. the dog sees a white ball. the dog is happy.
+
+いぬはもりにいます。いぬはしろいボールをみます。いぬはうれしいです。
+
+the dog is in the forest. the dog sees a white flower. the dog is happy.
+
+いぬはもりにいます。いぬはしろいはなをみます。いぬはうれしいです。
+
+the dog is in the forest. the dog sees a white leaf. the dog is happy.
+
+いぬはもりにいます。いぬはしろいはっぱをみます。いぬはうれしいです。
+
+the dog is in the house. the dog sees a white ball. the dog is happy.
+
+いぬはいえにいます。いぬはしろいボールをみます。いぬはうれしいです。
+
+the dog is in the house. the dog sees a white flower. the dog is happy.
+
+いぬはいえにいます。いぬはしろいはなをみます。いぬはうれしいです。
+
+the dog is in the house. the dog sees a white leaf. the dog is happy.
+
+いぬはいえにいます。いぬはしろいはっぱをみます。いぬはうれしいです。
+
+the dog is in the park. the dog sees a white ball. the dog is happy.
+
+いぬはこうえんにいます。いぬはしろいボールをみます。いぬはうれしいです。
+
+the dog is in the park. the dog sees a white flower. the dog is happy.
+
+いぬはこうえんにいます。いぬはしろいはなをみます。いぬはうれしいです。
+
+the dog is in the park. the dog sees a white leaf. the dog is happy.
+
+いぬはこうえんにいます。いぬはしろいはっぱをみます。いぬはうれしいです。
+
+the bird is in the garden. the bird sees a red ball. the bird is happy.
+
+とりはにわにいます。とりはあかいボールをみます。とりはうれしいです。
+
+the bird is in the garden. the bird sees a red flower. the bird is happy.
+
+とりはにわにいます。とりはあかいはなをみます。とりはうれしいです。
+
+the bird is in the garden. the bird sees a red leaf. the bird is happy.
+
+とりはにわにいます。とりはあかいはっぱをみます。とりはうれしいです。
+
+the bird is in the forest. the bird sees a red ball. the bird is happy.
+
+とりはもりにいます。とりはあかいボールをみます。とりはうれしいです。
+
+the bird is in the forest. the bird sees a red flower. the bird is happy.
+
+とりはもりにいます。とりはあかいはなをみます。とりはうれしいです。
+
+the bird is in the forest. the bird sees a red leaf. the bird is happy.
+
+とりはもりにいます。とりはあかいはっぱをみます。とりはうれしいです。
+
+the bird is in the house. the bird sees a red ball. the bird is happy.
+
+とりはいえにいます。とりはあかいボールをみます。とりはうれしいです。
+
+the bird is in the house. the bird sees a red flower. the bird is happy.
+
+とりはいえにいます。とりはあかいはなをみます。とりはうれしいです。
+
+the bird is in the house. the bird sees a red leaf. the bird is happy.
+
+とりはいえにいます。とりはあかいはっぱをみます。とりはうれしいです。
+
+the bird is in the park. the bird sees a red ball. the bird is happy.
+
+とりはこうえんにいます。とりはあかいボールをみます。とりはうれしいです。
+
+the bird is in the park. the bird sees a red flower. the bird is happy.
+
+とりはこうえんにいます。とりはあかいはなをみます。とりはうれしいです。
+
+the bird is in the park. the bird sees a red leaf. the bird is happy.
+
+とりはこうえんにいます。とりはあかいはっぱをみます。とりはうれしいです。
+
+the bird is in the garden. the bird sees a blue ball. the bird is happy.
+
+とりはにわにいます。とりはあおいボールをみます。とりはうれしいです。
+
+the bird is in the garden. the bird sees a blue flower. the bird is happy.
+
+とりはにわにいます。とりはあおいはなをみます。とりはうれしいです。
+
+the bird is in the garden. the bird sees a blue leaf. the bird is happy.
+
+とりはにわにいます。とりはあおいはっぱをみます。とりはうれしいです。
+
+the bird is in the forest. the bird sees a blue ball. the bird is happy.
+
+とりはもりにいます。とりはあおいボールをみます。とりはうれしいです。
+
+the bird is in the forest. the bird sees a blue flower. the bird is happy.
+
+とりはもりにいます。とりはあおいはなをみます。とりはうれしいです。
+
+the bird is in the forest. the bird sees a blue leaf. the bird is happy.
+
+とりはもりにいます。とりはあおいはっぱをみます。とりはうれしいです。
+
+the bird is in the house. the bird sees a blue ball. the bird is happy.
+
+とりはいえにいます。とりはあおいボールをみます。とりはうれしいです。
+
+the bird is in the house. the bird sees a blue flower. the bird is happy.
+
+とりはいえにいます。とりはあおいはなをみます。とりはうれしいです。
+
+the bird is in the house. the bird sees a blue leaf. the bird is happy.
+
+とりはいえにいます。とりはあおいはっぱをみます。とりはうれしいです。
+
+the bird is in the park. the bird sees a blue ball. the bird is happy.
+
+とりはこうえんにいます。とりはあおいボールをみます。とりはうれしいです。
+
+the bird is in the park. the bird sees a blue flower. the bird is happy.
+
+とりはこうえんにいます。とりはあおいはなをみます。とりはうれしいです。
+
+the bird is in the park. the bird sees a blue leaf. the bird is happy.
+
+とりはこうえんにいます。とりはあおいはっぱをみます。とりはうれしいです。
+
+the bird is in the garden. the bird sees a green ball. the bird is happy.
+
+とりはにわにいます。とりはみどりのボールをみます。とりはうれしいです。
+
+the bird is in the garden. the bird sees a green flower. the bird is happy.
+
+とりはにわにいます。とりはみどりのはなをみます。とりはうれしいです。
+
+the bird is in the garden. the bird sees a green leaf. the bird is happy.
+
+とりはにわにいます。とりはみどりのはっぱをみます。とりはうれしいです。
+
+the bird is in the forest. the bird sees a green ball. the bird is happy.
+
+とりはもりにいます。とりはみどりのボールをみます。とりはうれしいです。
+
+the bird is in the forest. the bird sees a green flower. the bird is happy.
+
+とりはもりにいます。とりはみどりのはなをみます。とりはうれしいです。
+
+the bird is in the forest. the bird sees a green leaf. the bird is happy.
+
+とりはもりにいます。とりはみどりのはっぱをみます。とりはうれしいです。
+
+the bird is in the house. the bird sees a green ball. the bird is happy.
+
+とりはいえにいます。とりはみどりのボールをみます。とりはうれしいです。
+
+the bird is in the house. the bird sees a green flower. the bird is happy.
+
+とりはいえにいます。とりはみどりのはなをみます。とりはうれしいです。
+
+the bird is in the house. the bird sees a green leaf. the bird is happy.
+
+とりはいえにいます。とりはみどりのはっぱをみます。とりはうれしいです。
+
+the bird is in the park. the bird sees a green ball. the bird is happy.
+
+とりはこうえんにいます。とりはみどりのボールをみます。とりはうれしいです。
+
+the bird is in the park. the bird sees a green flower. the bird is happy.
+
+とりはこうえんにいます。とりはみどりのはなをみます。とりはうれしいです。
+
+the bird is in the park. the bird sees a green leaf. the bird is happy.
+
+とりはこうえんにいます。とりはみどりのはっぱをみます。とりはうれしいです。
+
+the bird is in the garden. the bird sees a white ball. the bird is happy.
+
+とりはにわにいます。とりはしろいボールをみます。とりはうれしいです。
+
+the bird is in the garden. the bird sees a white flower. the bird is happy.
+
+とりはにわにいます。とりはしろいはなをみます。とりはうれしいです。
+
+the bird is in the garden. the bird sees a white leaf. the bird is happy.
+
+とりはにわにいます。とりはしろいはっぱをみます。とりはうれしいです。
+
+the bird is in the forest. the bird sees a white ball. the bird is happy.
+
+とりはもりにいます。とりはしろいボールをみます。とりはうれしいです。
+
+the bird is in the forest. the bird sees a white flower. the bird is happy.
+
+とりはもりにいます。とりはしろいはなをみます。とりはうれしいです。
+
+the bird is in the forest. the bird sees a white leaf. the bird is happy.
+
+とりはもりにいます。とりはしろいはっぱをみます。とりはうれしいです。
+
+the bird is in the house. the bird sees a white ball. the bird is happy.
+
+とりはいえにいます。とりはしろいボールをみます。とりはうれしいです。
+
+the bird is in the house. the bird sees a white flower. the bird is happy.
+
+とりはいえにいます。とりはしろいはなをみます。とりはうれしいです。
+
+the bird is in the house. the bird sees a white leaf. the bird is happy.
+
+とりはいえにいます。とりはしろいはっぱをみます。とりはうれしいです。
+
+the bird is in the park. the bird sees a white ball. the bird is happy.
+
+とりはこうえんにいます。とりはしろいボールをみます。とりはうれしいです。
+
+the bird is in the park. the bird sees a white flower. the bird is happy.
+
+とりはこうえんにいます。とりはしろいはなをみます。とりはうれしいです。
+
+the bird is in the park. the bird sees a white leaf. the bird is happy.
+
+とりはこうえんにいます。とりはしろいはっぱをみます。とりはうれしいです。
+
+the rabbit is in the garden. the rabbit sees a red ball. the rabbit is happy.
+
+うさぎはにわにいます。うさぎはあかいボールをみます。うさぎはうれしいです。
+
+the rabbit is in the garden. the rabbit sees a red flower. the rabbit is happy.
+
+うさぎはにわにいます。うさぎはあかいはなをみます。うさぎはうれしいです。
+
+the rabbit is in the garden. the rabbit sees a red leaf. the rabbit is happy.
+
+うさぎはにわにいます。うさぎはあかいはっぱをみます。うさぎはうれしいです。
+
+the rabbit is in the forest. the rabbit sees a red ball. the rabbit is happy.
+
+うさぎはもりにいます。うさぎはあかいボールをみます。うさぎはうれしいです。
+
+the rabbit is in the forest. the rabbit sees a red flower. the rabbit is happy.
+
+うさぎはもりにいます。うさぎはあかいはなをみます。うさぎはうれしいです。
+
+the rabbit is in the forest. the rabbit sees a red leaf. the rabbit is happy.
+
+うさぎはもりにいます。うさぎはあかいはっぱをみます。うさぎはうれしいです。
+
+the rabbit is in the house. the rabbit sees a red ball. the rabbit is happy.
+
+うさぎはいえにいます。うさぎはあかいボールをみます。うさぎはうれしいです。
+
+the rabbit is in the house. the rabbit sees a red flower. the rabbit is happy.
+
+うさぎはいえにいます。うさぎはあかいはなをみます。うさぎはうれしいです。
+
+the rabbit is in the house. the rabbit sees a red leaf. the rabbit is happy.
+
+うさぎはいえにいます。うさぎはあかいはっぱをみます。うさぎはうれしいです。
+
+the rabbit is in the park. the rabbit sees a red ball. the rabbit is happy.
+
+うさぎはこうえんにいます。うさぎはあかいボールをみます。うさぎはうれしいです。
+
+the rabbit is in the park. the rabbit sees a red flower. the rabbit is happy.
+
+うさぎはこうえんにいます。うさぎはあかいはなをみます。うさぎはうれしいです。
+
+the rabbit is in the park. the rabbit sees a red leaf. the rabbit is happy.
+
+うさぎはこうえんにいます。うさぎはあかいはっぱをみます。うさぎはうれしいです。
+
+the rabbit is in the garden. the rabbit sees a blue ball. the rabbit is happy.
+
+うさぎはにわにいます。うさぎはあおいボールをみます。うさぎはうれしいです。
+
+the rabbit is in the garden. the rabbit sees a blue flower. the rabbit is happy.
+
+うさぎはにわにいます。うさぎはあおいはなをみます。うさぎはうれしいです。
+
+the rabbit is in the garden. the rabbit sees a blue leaf. the rabbit is happy.
+
+うさぎはにわにいます。うさぎはあおいはっぱをみます。うさぎはうれしいです。
+
+the rabbit is in the forest. the rabbit sees a blue ball. the rabbit is happy.
+
+うさぎはもりにいます。うさぎはあおいボールをみます。うさぎはうれしいです。
+
+the rabbit is in the forest. the rabbit sees a blue flower. the rabbit is happy.
+
+うさぎはもりにいます。うさぎはあおいはなをみます。うさぎはうれしいです。
+
+the rabbit is in the forest. the rabbit sees a blue leaf. the rabbit is happy.
+
+うさぎはもりにいます。うさぎはあおいはっぱをみます。うさぎはうれしいです。
+
+the rabbit is in the house. the rabbit sees a blue ball. the rabbit is happy.
+
+うさぎはいえにいます。うさぎはあおいボールをみます。うさぎはうれしいです。
+
+the rabbit is in the house. the rabbit sees a blue flower. the rabbit is happy.
+
+うさぎはいえにいます。うさぎはあおいはなをみます。うさぎはうれしいです。
+
+the rabbit is in the house. the rabbit sees a blue leaf. the rabbit is happy.
+
+うさぎはいえにいます。うさぎはあおいはっぱをみます。うさぎはうれしいです。
+
+the rabbit is in the park. the rabbit sees a blue ball. the rabbit is happy.
+
+うさぎはこうえんにいます。うさぎはあおいボールをみます。うさぎはうれしいです。
+
+the rabbit is in the park. the rabbit sees a blue flower. the rabbit is happy.
+
+うさぎはこうえんにいます。うさぎはあおいはなをみます。うさぎはうれしいです。
+
+the rabbit is in the park. the rabbit sees a blue leaf. the rabbit is happy.
+
+うさぎはこうえんにいます。うさぎはあおいはっぱをみます。うさぎはうれしいです。
+
+the rabbit is in the garden. the rabbit sees a green ball. the rabbit is happy.
+
+うさぎはにわにいます。うさぎはみどりのボールをみます。うさぎはうれしいです。
+
+the rabbit is in the garden. the rabbit sees a green flower. the rabbit is happy.
+
+うさぎはにわにいます。うさぎはみどりのはなをみます。うさぎはうれしいです。
+
+the rabbit is in the garden. the rabbit sees a green leaf. the rabbit is happy.
+
+うさぎはにわにいます。うさぎはみどりのはっぱをみます。うさぎはうれしいです。
+
+the rabbit is in the forest. the rabbit sees a green ball. the rabbit is happy.
+
+うさぎはもりにいます。うさぎはみどりのボールをみます。うさぎはうれしいです。
+
+the rabbit is in the forest. the rabbit sees a green flower. the rabbit is happy.
+
+うさぎはもりにいます。うさぎはみどりのはなをみます。うさぎはうれしいです。
+
+the rabbit is in the forest. the rabbit sees a green leaf. the rabbit is happy.
+
+うさぎはもりにいます。うさぎはみどりのはっぱをみます。うさぎはうれしいです。
+
+the rabbit is in the house. the rabbit sees a green ball. the rabbit is happy.
+
+うさぎはいえにいます。うさぎはみどりのボールをみます。うさぎはうれしいです。
+
+the rabbit is in the house. the rabbit sees a green flower. the rabbit is happy.
+
+うさぎはいえにいます。うさぎはみどりのはなをみます。うさぎはうれしいです。
+
+the rabbit is in the house. the rabbit sees a green leaf. the rabbit is happy.
+
+うさぎはいえにいます。うさぎはみどりのはっぱをみます。うさぎはうれしいです。
+
+the rabbit is in the park. the rabbit sees a green ball. the rabbit is happy.
+
+うさぎはこうえんにいます。うさぎはみどりのボールをみます。うさぎはうれしいです。
+
+the rabbit is in the park. the rabbit sees a green flower. the rabbit is happy.
+
+うさぎはこうえんにいます。うさぎはみどりのはなをみます。うさぎはうれしいです。
+
+the rabbit is in the park. the rabbit sees a green leaf. the rabbit is happy.
+
+うさぎはこうえんにいます。うさぎはみどりのはっぱをみます。うさぎはうれしいです。
+
+the rabbit is in the garden. the rabbit sees a white ball. the rabbit is happy.
+
+うさぎはにわにいます。うさぎはしろいボールをみます。うさぎはうれしいです。
+
+the rabbit is in the garden. the rabbit sees a white flower. the rabbit is happy.
+
+うさぎはにわにいます。うさぎはしろいはなをみます。うさぎはうれしいです。
+
+the rabbit is in the garden. the rabbit sees a white leaf. the rabbit is happy.
+
+うさぎはにわにいます。うさぎはしろいはっぱをみます。うさぎはうれしいです。
+
+the rabbit is in the forest. the rabbit sees a white ball. the rabbit is happy.
+
+うさぎはもりにいます。うさぎはしろいボールをみます。うさぎはうれしいです。
+
+the rabbit is in the forest. the rabbit sees a white flower. the rabbit is happy.
+
+うさぎはもりにいます。うさぎはしろいはなをみます。うさぎはうれしいです。
+
+the rabbit is in the forest. the rabbit sees a white leaf. the rabbit is happy.
+
+うさぎはもりにいます。うさぎはしろいはっぱをみます。うさぎはうれしいです。
+
+the rabbit is in the house. the rabbit sees a white ball. the rabbit is happy.
+
+うさぎはいえにいます。うさぎはしろいボールをみます。うさぎはうれしいです。
+
+the rabbit is in the house. the rabbit sees a white flower. the rabbit is happy.
+
+うさぎはいえにいます。うさぎはしろいはなをみます。うさぎはうれしいです。
+
+the rabbit is in the house. the rabbit sees a white leaf. the rabbit is happy.
+
+うさぎはいえにいます。うさぎはしろいはっぱをみます。うさぎはうれしいです。
+
+the rabbit is in the park. the rabbit sees a white ball. the rabbit is happy.
+
+うさぎはこうえんにいます。うさぎはしろいボールをみます。うさぎはうれしいです。
+
+the rabbit is in the park. the rabbit sees a white flower. the rabbit is happy.
+
+うさぎはこうえんにいます。うさぎはしろいはなをみます。うさぎはうれしいです。
+
+the rabbit is in the park. the rabbit sees a white leaf. the rabbit is happy.
+
+うさぎはこうえんにいます。うさぎはしろいはっぱをみます。うさぎはうれしいです。
+
+the fox is in the garden. the fox sees a red ball. the fox is happy.
+
+きつねはにわにいます。きつねはあかいボールをみます。きつねはうれしいです。
+
+the fox is in the garden. the fox sees a red flower. the fox is happy.
+
+きつねはにわにいます。きつねはあかいはなをみます。きつねはうれしいです。
+
+the fox is in the garden. the fox sees a red leaf. the fox is happy.
+
+きつねはにわにいます。きつねはあかいはっぱをみます。きつねはうれしいです。
+
+the fox is in the forest. the fox sees a red ball. the fox is happy.
+
+きつねはもりにいます。きつねはあかいボールをみます。きつねはうれしいです。
+
+the fox is in the forest. the fox sees a red flower. the fox is happy.
+
+きつねはもりにいます。きつねはあかいはなをみます。きつねはうれしいです。
+
+the fox is in the forest. the fox sees a red leaf. the fox is happy.
+
+きつねはもりにいます。きつねはあかいはっぱをみます。きつねはうれしいです。
+
+the fox is in the house. the fox sees a red ball. the fox is happy.
+
+きつねはいえにいます。きつねはあかいボールをみます。きつねはうれしいです。
+
+the fox is in the house. the fox sees a red flower. the fox is happy.
+
+きつねはいえにいます。きつねはあかいはなをみます。きつねはうれしいです。
+
+the fox is in the house. the fox sees a red leaf. the fox is happy.
+
+きつねはいえにいます。きつねはあかいはっぱをみます。きつねはうれしいです。
+
+the fox is in the park. the fox sees a red ball. the fox is happy.
+
+きつねはこうえんにいます。きつねはあかいボールをみます。きつねはうれしいです。
+
+the fox is in the park. the fox sees a red flower. the fox is happy.
+
+きつねはこうえんにいます。きつねはあかいはなをみます。きつねはうれしいです。
+
+the fox is in the park. the fox sees a red leaf. the fox is happy.
+
+きつねはこうえんにいます。きつねはあかいはっぱをみます。きつねはうれしいです。
+
+the fox is in the garden. the fox sees a blue ball. the fox is happy.
+
+きつねはにわにいます。きつねはあおいボールをみます。きつねはうれしいです。
+
+the fox is in the garden. the fox sees a blue flower. the fox is happy.
+
+きつねはにわにいます。きつねはあおいはなをみます。きつねはうれしいです。
+
+the fox is in the garden. the fox sees a blue leaf. the fox is happy.
+
+きつねはにわにいます。きつねはあおいはっぱをみます。きつねはうれしいです。
+
+the fox is in the forest. the fox sees a blue ball. the fox is happy.
+
+きつねはもりにいます。きつねはあおいボールをみます。きつねはうれしいです。
+
+the fox is in the forest. the fox sees a blue flower. the fox is happy.
+
+きつねはもりにいます。きつねはあおいはなをみます。きつねはうれしいです。
+
+the fox is in the forest. the fox sees a blue leaf. the fox is happy.
+
+きつねはもりにいます。きつねはあおいはっぱをみます。きつねはうれしいです。
+
+the fox is in the house. the fox sees a blue ball. the fox is happy.
+
+きつねはいえにいます。きつねはあおいボールをみます。きつねはうれしいです。
+
+the fox is in the house. the fox sees a blue flower. the fox is happy.
+
+きつねはいえにいます。きつねはあおいはなをみます。きつねはうれしいです。
+
+the fox is in the house. the fox sees a blue leaf. the fox is happy.
+
+きつねはいえにいます。きつねはあおいはっぱをみます。きつねはうれしいです。
+
+the fox is in the park. the fox sees a blue ball. the fox is happy.
+
+きつねはこうえんにいます。きつねはあおいボールをみます。きつねはうれしいです。
+
+the fox is in the park. the fox sees a blue flower. the fox is happy.
+
+きつねはこうえんにいます。きつねはあおいはなをみます。きつねはうれしいです。
+
+the fox is in the park. the fox sees a blue leaf. the fox is happy.
+
+きつねはこうえんにいます。きつねはあおいはっぱをみます。きつねはうれしいです。
+
+the fox is in the garden. the fox sees a green ball. the fox is happy.
+
+きつねはにわにいます。きつねはみどりのボールをみます。きつねはうれしいです。
+
+the fox is in the garden. the fox sees a green flower. the fox is happy.
+
+きつねはにわにいます。きつねはみどりのはなをみます。きつねはうれしいです。
+
+the fox is in the garden. the fox sees a green leaf. the fox is happy.
+
+きつねはにわにいます。きつねはみどりのはっぱをみます。きつねはうれしいです。
+
+the fox is in the forest. the fox sees a green ball. the fox is happy.
+
+きつねはもりにいます。きつねはみどりのボールをみます。きつねはうれしいです。
+
+the fox is in the forest. the fox sees a green flower. the fox is happy.
+
+きつねはもりにいます。きつねはみどりのはなをみます。きつねはうれしいです。
+
+the fox is in the forest. the fox sees a green leaf. the fox is happy.
+
+きつねはもりにいます。きつねはみどりのはっぱをみます。きつねはうれしいです。
+
+the fox is in the house. the fox sees a green ball. the fox is happy.
+
+きつねはいえにいます。きつねはみどりのボールをみます。きつねはうれしいです。
+
+the fox is in the house. the fox sees a green flower. the fox is happy.
+
+きつねはいえにいます。きつねはみどりのはなをみます。きつねはうれしいです。
+
+the fox is in the house. the fox sees a green leaf. the fox is happy.
+
+きつねはいえにいます。きつねはみどりのはっぱをみます。きつねはうれしいです。
+
+the fox is in the park. the fox sees a green ball. the fox is happy.
+
+きつねはこうえんにいます。きつねはみどりのボールをみます。きつねはうれしいです。
+
+the fox is in the park. the fox sees a green flower. the fox is happy.
+
+きつねはこうえんにいます。きつねはみどりのはなをみます。きつねはうれしいです。
+
+the fox is in the park. the fox sees a green leaf. the fox is happy.
+
+きつねはこうえんにいます。きつねはみどりのはっぱをみます。きつねはうれしいです。
+
+the fox is in the garden. the fox sees a white ball. the fox is happy.
+
+きつねはにわにいます。きつねはしろいボールをみます。きつねはうれしいです。
+
+the fox is in the garden. the fox sees a white flower. the fox is happy.
+
+きつねはにわにいます。きつねはしろいはなをみます。きつねはうれしいです。
+
+the fox is in the garden. the fox sees a white leaf. the fox is happy.
+
+きつねはにわにいます。きつねはしろいはっぱをみます。きつねはうれしいです。
+
+the fox is in the forest. the fox sees a white ball. the fox is happy.
+
+きつねはもりにいます。きつねはしろいボールをみます。きつねはうれしいです。
+
+the fox is in the forest. the fox sees a white flower. the fox is happy.
+
+きつねはもりにいます。きつねはしろいはなをみます。きつねはうれしいです。
+
+the fox is in the forest. the fox sees a white leaf. the fox is happy.
+
+きつねはもりにいます。きつねはしろいはっぱをみます。きつねはうれしいです。
+
+the fox is in the house. the fox sees a white ball. the fox is happy.
+
+きつねはいえにいます。きつねはしろいボールをみます。きつねはうれしいです。
+
+the fox is in the house. the fox sees a white flower. the fox is happy.
+
+きつねはいえにいます。きつねはしろいはなをみます。きつねはうれしいです。
+
+the fox is in the house. the fox sees a white leaf. the fox is happy.
+
+きつねはいえにいます。きつねはしろいはっぱをみます。きつねはうれしいです。
+
+the fox is in the park. the fox sees a white ball. the fox is happy.
+
+きつねはこうえんにいます。きつねはしろいボールをみます。きつねはうれしいです。
+
+the fox is in the park. the fox sees a white flower. the fox is happy.
+
+きつねはこうえんにいます。きつねはしろいはなをみます。きつねはうれしいです。
+
+the fox is in the park. the fox sees a white leaf. the fox is happy.
+
+きつねはこうえんにいます。きつねはしろいはっぱをみます。きつねはうれしいです。
+
+the bear is in the garden. the bear sees a red ball. the bear is happy.
+
+くまはにわにいます。くまはあかいボールをみます。くまはうれしいです。
+
+the bear is in the garden. the bear sees a red flower. the bear is happy.
+
+くまはにわにいます。くまはあかいはなをみます。くまはうれしいです。
+
+the bear is in the garden. the bear sees a red leaf. the bear is happy.
+
+くまはにわにいます。くまはあかいはっぱをみます。くまはうれしいです。
+
+the bear is in the forest. the bear sees a red ball. the bear is happy.
+
+くまはもりにいます。くまはあかいボールをみます。くまはうれしいです。
+
+the bear is in the forest. the bear sees a red flower. the bear is happy.
+
+くまはもりにいます。くまはあかいはなをみます。くまはうれしいです。
+
+the bear is in the forest. the bear sees a red leaf. the bear is happy.
+
+くまはもりにいます。くまはあかいはっぱをみます。くまはうれしいです。
+
+the bear is in the house. the bear sees a red ball. the bear is happy.
+
+くまはいえにいます。くまはあかいボールをみます。くまはうれしいです。
+
+the bear is in the house. the bear sees a red flower. the bear is happy.
+
+くまはいえにいます。くまはあかいはなをみます。くまはうれしいです。
+
+the bear is in the house. the bear sees a red leaf. the bear is happy.
+
+くまはいえにいます。くまはあかいはっぱをみます。くまはうれしいです。
+
+the bear is in the park. the bear sees a red ball. the bear is happy.
+
+くまはこうえんにいます。くまはあかいボールをみます。くまはうれしいです。
+
+the bear is in the park. the bear sees a red flower. the bear is happy.
+
+くまはこうえんにいます。くまはあかいはなをみます。くまはうれしいです。
+
+the bear is in the park. the bear sees a red leaf. the bear is happy.
+
+くまはこうえんにいます。くまはあかいはっぱをみます。くまはうれしいです。
+
+the bear is in the garden. the bear sees a blue ball. the bear is happy.
+
+くまはにわにいます。くまはあおいボールをみます。くまはうれしいです。
+
+the bear is in the garden. the bear sees a blue flower. the bear is happy.
+
+くまはにわにいます。くまはあおいはなをみます。くまはうれしいです。
+
+the bear is in the garden. the bear sees a blue leaf. the bear is happy.
+
+くまはにわにいます。くまはあおいはっぱをみます。くまはうれしいです。
+
+the bear is in the forest. the bear sees a blue ball. the bear is happy.
+
+くまはもりにいます。くまはあおいボールをみます。くまはうれしいです。
+
+the bear is in the forest. the bear sees a blue flower. the bear is happy.
+
+くまはもりにいます。くまはあおいはなをみます。くまはうれしいです。
+
+the bear is in the forest. the bear sees a blue leaf. the bear is happy.
+
+くまはもりにいます。くまはあおいはっぱをみます。くまはうれしいです。
+
+the bear is in the house. the bear sees a blue ball. the bear is happy.
+
+くまはいえにいます。くまはあおいボールをみます。くまはうれしいです。
+
+the bear is in the house. the bear sees a blue flower. the bear is happy.
+
+くまはいえにいます。くまはあおいはなをみます。くまはうれしいです。
+
+the bear is in the house. the bear sees a blue leaf. the bear is happy.
+
+くまはいえにいます。くまはあおいはっぱをみます。くまはうれしいです。
+
+the bear is in the park. the bear sees a blue ball. the bear is happy.
+
+くまはこうえんにいます。くまはあおいボールをみます。くまはうれしいです。
+
+the bear is in the park. the bear sees a blue flower. the bear is happy.
+
+くまはこうえんにいます。くまはあおいはなをみます。くまはうれしいです。
+
+the bear is in the park. the bear sees a blue leaf. the bear is happy.
+
+くまはこうえんにいます。くまはあおいはっぱをみます。くまはうれしいです。
+
+the bear is in the garden. the bear sees a green ball. the bear is happy.
+
+くまはにわにいます。くまはみどりのボールをみます。くまはうれしいです。
+
+the bear is in the garden. the bear sees a green flower. the bear is happy.
+
+くまはにわにいます。くまはみどりのはなをみます。くまはうれしいです。
+
+the bear is in the garden. the bear sees a green leaf. the bear is happy.
+
+くまはにわにいます。くまはみどりのはっぱをみます。くまはうれしいです。
+
+the bear is in the forest. the bear sees a green ball. the bear is happy.
+
+くまはもりにいます。くまはみどりのボールをみます。くまはうれしいです。
+
+the bear is in the forest. the bear sees a green flower. the bear is happy.
+
+くまはもりにいます。くまはみどりのはなをみます。くまはうれしいです。
+
+the bear is in the forest. the bear sees a green leaf. the bear is happy.
+
+くまはもりにいます。くまはみどりのはっぱをみます。くまはうれしいです。
+
+the bear is in the house. the bear sees a green ball. the bear is happy.
+
+くまはいえにいます。くまはみどりのボールをみます。くまはうれしいです。
+
+the bear is in the house. the bear sees a green flower. the bear is happy.
+
+くまはいえにいます。くまはみどりのはなをみます。くまはうれしいです。
+
+the bear is in the house. the bear sees a green leaf. the bear is happy.
+
+くまはいえにいます。くまはみどりのはっぱをみます。くまはうれしいです。
+
+the bear is in the park. the bear sees a green ball. the bear is happy.
+
+くまはこうえんにいます。くまはみどりのボールをみます。くまはうれしいです。
+
+the bear is in the park. the bear sees a green flower. the bear is happy.
+
+くまはこうえんにいます。くまはみどりのはなをみます。くまはうれしいです。
+
+the bear is in the park. the bear sees a green leaf. the bear is happy.
+
+くまはこうえんにいます。くまはみどりのはっぱをみます。くまはうれしいです。
+
+the bear is in the garden. the bear sees a white ball. the bear is happy.
+
+くまはにわにいます。くまはしろいボールをみます。くまはうれしいです。
+
+the bear is in the garden. the bear sees a white flower. the bear is happy.
+
+くまはにわにいます。くまはしろいはなをみます。くまはうれしいです。
+
+the bear is in the garden. the bear sees a white leaf. the bear is happy.
+
+くまはにわにいます。くまはしろいはっぱをみます。くまはうれしいです。
+
+the bear is in the forest. the bear sees a white ball. the bear is happy.
+
+くまはもりにいます。くまはしろいボールをみます。くまはうれしいです。
+
+the bear is in the forest. the bear sees a white flower. the bear is happy.
+
+くまはもりにいます。くまはしろいはなをみます。くまはうれしいです。
+
+the bear is in the forest. the bear sees a white leaf. the bear is happy.
+
+くまはもりにいます。くまはしろいはっぱをみます。くまはうれしいです。
+
+the bear is in the house. the bear sees a white ball. the bear is happy.
+
+くまはいえにいます。くまはしろいボールをみます。くまはうれしいです。
+
+the bear is in the house. the bear sees a white flower. the bear is happy.
+
+くまはいえにいます。くまはしろいはなをみます。くまはうれしいです。
+
+the bear is in the house. the bear sees a white leaf. the bear is happy.
+
+くまはいえにいます。くまはしろいはっぱをみます。くまはうれしいです。
+
+the bear is in the park. the bear sees a white ball. the bear is happy.
+
+くまはこうえんにいます。くまはしろいボールをみます。くまはうれしいです。
+
+the bear is in the park. the bear sees a white flower. the bear is happy.
+
+くまはこうえんにいます。くまはしろいはなをみます。くまはうれしいです。
+
+the bear is in the park. the bear sees a white leaf. the bear is happy.
+
+くまはこうえんにいます。くまはしろいはっぱをみます。くまはうれしいです。

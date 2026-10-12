@@ -1,0 +1,15 @@
+.venv/
+node_modules/
+dist/
+__pycache__/
+*.pyc
+.pytest_cache/
+runs/
+playwright-report/
+test-results/
+
+*.egg-info/
+coverage/
+.DS_Store
+# Local visual reference and review working files.
+docs/design/

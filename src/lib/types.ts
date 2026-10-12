@@ -1,0 +1,8 @@
+export type ModelConfig={vocabSize:number;blockSize:number;embedDim:number;heads:number;layers:number;};
+export type TrainConfig={steps:number;batchSize:number;learningRate:number;seed:number;blockSize:number;embedDim:number;heads:number;layers:number;evalEvery:number;};
+export type Metric={step:number;trainLoss:number;validationLoss:number;elapsedSeconds:number};
+export type GenerationOptions={temperature:number;topK:number;seed:number;maxNewTokens:number;};
+export type Probability={token:string;id:number;probability:number};
+export type Checkpoint={step:number;weights:Record<string,{shape:number[];data:number[]}>;samples:{prompt:string;output:string;options:GenerationOptions}[];};
+export type RunBundle={schemaVersion:1;id:string;createdAt:string;status:'completed'|'cancelled'|'running';origin:'pytorch';model:ModelConfig;training:TrainConfig;parameterCount:number;tokenizer:{type:'character';vocab:string[];special:{unk:0;bos:1;eos:2};learnedFrom:'train_only'};dataset:{name:string;license:string;provenance:string;sha256:string;trainDocuments:number;validationDocuments:number;trainTokens:number;validationTokens:number;unknownValidationTokens:number;splitSeed:number;splitMethod:string;trainPreview:string;validationPreview:string;limitations:string};environment:{python:string;torch:string;device:string;threads:number;platform:string};metrics:Metric[];checkpoints:Checkpoint[];baseline:{trainLoss:number;validationLoss:number;type:'bigram';smoothing:number};};
+export type TrainStatus={status:'idle'|'running'|'completed'|'cancelled'|'failed';runId?:string;metrics:Metric[];error?:string;bundle?:RunBundle;config?:TrainConfig;};

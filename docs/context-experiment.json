@@ -1,0 +1,22 @@
+{
+  "runId": "demo",
+  "checkpointStep": 600,
+  "datasetSha256": "27debaf560f7f35df1e239471fd80200321f16842c89991afd363acce97c9f32",
+  "positionSeed": 718,
+  "positions": 512,
+  "metric": "mean next-token negative log likelihood, natural logarithm",
+  "experiments": [
+    {
+      "contextCap": 8,
+      "loss": 0.25162294198321433
+    },
+    {
+      "contextCap": 24,
+      "loss": 0.19105928119074633
+    },
+    {
+      "contextCap": 48,
+      "loss": 0.19515759792352583
+    }
+  ]
+}
