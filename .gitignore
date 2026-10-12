@@ -4,7 +4,7 @@ dist/
 __pycache__/
 *.pyc
 .pytest_cache/
-runs/
+/runs/
 playwright-report/
 test-results/
 
