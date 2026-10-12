@@ -10,6 +10,17 @@ A real PyTorch decoder-only Transformer and a bilingual React learning lab. No p
 
 Actual Chromium screenshot of the bundled measured run. Hosted mode is recorded-run exploration; local training requires the Python companion.
 
+## Learn inside the app
+
+Use **Guide** in the header, or **Start the learning path** above the experiment. Eight directly linkable chapters explain why each part is needed, then connect it to mechanisms, equations, and the actual implementation. Each chapter has optional deeper sections rather than requiring you to read everything at once.
+
+- `#/learn/overview`: training changes weights; generation uses fixed weights
+- `#/learn/embeddings`: inspect real token and position embedding values
+- `#/learn/loss`: compute a real next-character probability and single-target loss
+- `#/learn/generation`: compare saved checkpoints or temperatures under controlled settings
+
+The guide preserves your experiment inputs and output while you read. Browser Back/Forward and direct chapter links work without server-side routes. Structural diagrams are labeled separately from measurements; the single-target probe uses raw training probabilities, whereas comparison bars include sampling filters. Imported run provenance remains self-reported.
+
 ## Two honest execution modes
 
 - **Local training:** the Python companion serves the app on `127.0.0.1`. The browser controls real CPU training, cancellation, checkpoint saving and resumption.

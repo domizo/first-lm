@@ -10,8 +10,8 @@ test('recorded run: four steps, real inference, bilingual mobile, guide and JSON
  await page.goto('/');await expect(page.getByRole('heading',{name:'Training, made visible',exact:true})).toBeVisible();
  await expect(page.getByRole('button',{name:'Run local training',exact:true})).toBeDisabled();await expectNoOverflow(page);
  await screenshot(page,info,'train-desktop-en');
- await page.locator('.checkpoint-labels button').first().click();await expect(page.locator('.sample-label').last()).toContainText('At initialization');
- await page.locator('.checkpoint-labels button').last().click();
+ await page.locator('.checkpoint-labels:visible button').first().click();await expect(page.locator('.sample-label').last()).toContainText('At initialization');
+ await page.locator('.checkpoint-labels:visible button').last().click();
  await goStep(page,0);await expect(page.getByRole('heading',{name:'Know what goes in'})).toBeVisible();
  await page.getByRole('button',{name:'Held-out preview',exact:true}).click();await expect(page.locator('.dataset-preview')).not.toBeEmpty();
  await page.getByRole('button',{name:'Edit corpus',exact:true}).click();await expect(page.locator('#corpus-editor')).not.toHaveValue('');
@@ -21,13 +21,13 @@ test('recorded run: four steps, real inference, bilingual mobile, guide and JSON
  await goStep(page,1);await page.getByLabel('Try your own text',{exact:true}).fill('the 🦄');await expect(page.locator('.token-chip.unknown')).toHaveCount(1);
  await expect(page.getByText('Characters outside the training vocabulary map to <unk> (ID 0). A tiny model cannot learn characters it has never seen.')).toBeVisible();
  await screenshot(page,info,'tokenize-desktop-en');
- await goStep(page,3);await page.getByLabel('New tokens',{exact:true}).fill('32');await page.getByLabel('Seed',{exact:true}).fill('42');
+ await goStep(page,3);await page.getByLabel('New tokens',{exact:true}).fill('32');await page.getByRole('spinbutton',{name:'Seed',exact:true}).fill('42');
  await page.getByRole('button',{name:'Generate text',exact:true}).click();await expect(page.getByRole('heading',{name:'What could come next?',exact:true})).toBeVisible({timeout:60000});
  const output=await page.locator('.generation-output').innerText();expect(output.length).toBeGreaterThan(3);
  await page.getByRole('button',{name:'Generate text',exact:true}).click();await expect(page.getByRole('button',{name:'Generate text',exact:true})).toBeEnabled({timeout:60000});await expect(page.locator('.generation-output')).toHaveText(output);
  await expect(page.locator('.probabilities')).toContainText('immediately after the original prompt');await screenshot(page,info,'generate-desktop-en');
  await page.getByLabel('Temperature',{exact:true}).fill('0');await page.getByRole('button',{name:'Generate text',exact:true}).click();await expect(page.getByRole('button',{name:'Generate text',exact:true})).toBeEnabled({timeout:60000});
- await page.getByRole('button',{name:'Guide',exact:true}).click();await expect(page.getByRole('dialog')).toBeVisible();await expect(page.locator('.mask-diagram .allowed')).toHaveCount(15);await screenshot(page,info,'guide-desktop-en');await page.getByRole('button',{name:'Close guide',exact:true}).click();
+ await page.getByRole('link',{name:'Guide',exact:true}).click();await expect(page).toHaveURL(/#\/learn\/overview$/);await screenshot(page,info,'guide-desktop-en');await page.getByRole('link',{name:'Return to your experiment',exact:true}).click();
  const downloadPromise=page.waitForEvent('download');await page.getByRole('button',{name:'Download run',exact:true}).click();const download=await downloadPromise;const downloaded=await download.path();expect(downloaded).toBeTruthy();const json=JSON.parse(await fs.readFile(downloaded!,'utf8'));expect(json.origin).toBe('pytorch');expect(json.checkpoints.length).toBeGreaterThan(1);
  await page.locator('input[type=file]').setInputFiles(downloaded!);await expect(page.getByText('Imported training run',{exact:true})).toBeVisible();await expect(page.locator('.import-notice')).toContainText('not authenticated');
  await page.locator('input[type=file]').setInputFiles({name:'bad.json',mimeType:'application/json',buffer:Buffer.from('{"schemaVersion":0}')});await expect(page.getByRole('alert')).toContainText('version 1 PyTorch');await page.getByRole('button',{name:'Dismiss error'}).click();
@@ -66,7 +66,7 @@ test('local companion: actual training, cancellation, reload and resume',async({
  const previous=await (await request.get('http://127.0.0.1:8765/api/status')).json();if(previous.status==='running'){await request.post('http://127.0.0.1:8765/api/cancel',{data:{}});await expect.poll(async()=>(await (await request.get('http://127.0.0.1:8765/api/status')).json()).status,{timeout:90000}).not.toBe('running');}
  await page.goto('http://127.0.0.1:8765');await expect(page.getByRole('button',{name:'Run local training',exact:true})).toBeEnabled();
  const customCorpus=Array.from({length:24},(_,i)=>`the cat ${i} is calm. the small dog ${i} is kind.\nねこ ${i} は しずかです。`).join('\n\n');await goStep(page,0);await page.getByRole('button',{name:'Edit corpus',exact:true}).click();await page.locator('#corpus-editor').fill(customCorpus);await goStep(page,2);
- await page.getByLabel('Training steps',{exact:true}).fill('12');await page.getByLabel('Seed',{exact:true}).fill('13');
+ await page.getByLabel('Training steps',{exact:true}).fill('12');await page.getByRole('spinbutton',{name:'Seed',exact:true}).fill('13');
  await page.getByText('Model & batch settings',{exact:true}).click();await page.getByLabel('Context length',{exact:true}).fill('8');await page.getByLabel('Embedding width',{exact:true}).selectOption('16');await page.getByLabel('Attention heads',{exact:true}).selectOption('1');await page.getByLabel('Layers',{exact:true}).fill('1');await page.getByLabel('Batch size',{exact:true}).fill('4');await page.getByLabel('Evaluate every',{exact:true}).fill('4');
  await page.getByRole('button',{name:'Run local training',exact:true}).click();
  await expect.poll(async()=>{const r=await request.get('http://127.0.0.1:8765/api/status');return (await r.json()).status;},{timeout:90000}).toBe('completed');
