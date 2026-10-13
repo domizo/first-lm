@@ -40,3 +40,14 @@ test('beginner path: bilingual illustrated chapters, low-pressure questions, and
  await page.setViewportSize({width:320,height:740});for(const chapter of chapterIds){await page.locator(`.learning-toc a[href="#/learn/${chapter}"]`).click();await noOverflow(page);}
  expect(mutations).toEqual([]);expect(errors).toEqual([]);
 });
+
+test('LLM introduction: first in guide, bilingual scope, keyboard start, and existing chapter links',async({page},info)=>{
+ const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('/#/learn/overview');await expect(page.locator('.guide-introduction')).toBeVisible();await expect(page.locator('#guide-intro-title')).toContainText('What is an LLM?');await expect(page.locator('.guide-introduction')).toContainText('Large Language Model');await expect(page.locator('.guide-map li')).toHaveCount(6);await noOverflow(page);
+ expect((await page.locator('.guide-introduction').boundingBox())!.y).toBeLessThan((await page.locator('.learning-toc').boundingBox())!.y);
+ const desktop=info.outputPath('llm-intro-desktop-en.png');await page.locator('.guide-introduction').screenshot({path:desktop});await info.attach('llm-intro-desktop-en',{path:desktop,contentType:'image/png'});
+ await page.locator('.guide-scope-details > summary').focus();await page.keyboard.press('Enter');await expect(page.locator('.guide-scope-details')).toHaveAttribute('open','');await expect(page.locator('.guide-scope-details p')).toContainText('RLHF');await page.keyboard.press('Enter');
+ await page.getByRole('button',{name:'Start the eight chapters',exact:true}).focus();await page.keyboard.press('Enter');await expect(page.locator('#guide-first-chapter')).toBeFocused();await expect(page).toHaveURL(/#\/learn\/overview$/);
+ await page.locator('.learning-toc a[href="#/learn/data"]').click();await expect(page.locator('.beginner-diagram')).toHaveAttribute('data-chapter','data');await expect(page.locator('.guide-introduction')).toHaveCount(0);await page.goBack();await expect(page.locator('.guide-introduction')).toBeVisible();
+ await page.getByRole('button',{name:'JA',exact:true}).click();await expect(page.locator('#guide-intro-title')).toContainText('LLMって、どんなもの？');await page.setViewportSize({width:390,height:844});await noOverflow(page);const mobile=info.outputPath('llm-intro-mobile-ja.png');await page.locator('.guide-introduction').screenshot({path:mobile});await info.attach('llm-intro-mobile-ja',{path:mobile,contentType:'image/png'});
+ await page.getByRole('button',{name:'8章の学習を始める',exact:true}).click();await expect(page.locator('#guide-first-chapter')).toBeFocused();await expect(page).toHaveURL(/#\/learn\/overview$/);await page.setViewportSize({width:320,height:740});await noOverflow(page);await page.reload();await expect(page.locator('.guide-introduction')).toBeVisible();expect(errors).toEqual([]);
+});

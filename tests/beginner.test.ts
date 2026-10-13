@@ -6,6 +6,7 @@ import {chapterIds} from '../src/lib/routes';
 import {LanguageContext} from '../src/lib/i18n';
 import BeginnerDiagram from '../src/components/BeginnerDiagram';
 import QuickCheck,{checks} from '../src/components/QuickCheck';
+import LearningGuide from '../src/components/LearningGuide';
 import type {ChapterId} from '../src/lib/routes';
 import type {Language} from '../src/lib/i18n';
 const diagram=(chapter:ChapterId,language:Language)=>renderToStaticMarkup(createElement(LanguageContext.Provider,{value:language},createElement(BeginnerDiagram,{chapter})));
@@ -31,4 +32,16 @@ describe('beginner learning path',()=>{
  it('shows the whole-document split before creating prediction examples',()=>{const html=diagram('data','en');expect(html.indexOf('Split whole documents first')).toBeLessThan(html.indexOf('Make questions within each pile'));});
  it('labels made-up embedding numbers and the same-letter/different-position example',()=>{const html=diagram('embeddings','en');expect(html).toContain('Made-up labels and numbers');expect(html).toContain('Two t letters, two positions');});
  it('defines illustrative loss using target probability rather than top-one accuracy',()=>{const html=diagram('loss','en');expect(html).toContain('chosen percentages, not measured');expect(html).toContain('not only which letter ranked first');});
+});
+
+describe('LLM introduction',()=>{
+ for(const language of ['en','ja'] as const)it(`defines LLM and learning scope before the chapters in ${language}`,()=>{
+  const html=renderToStaticMarkup(createElement(LanguageContext.Provider,{value:language},createElement(LearningGuide,{chapterId:'overview',bundle:null,checkpoint:0,onCheckpoint:()=>{},returnStep:2})));
+  expect(html).toContain('Large Language Model');expect(html).toContain('62,064');expect(html).toContain('RLHF');expect(html).toContain('guide-map');expect(html).toContain(language==='en'?'Start the eight chapters':'8章の学習を始める');
+  expect(html.indexOf('guide-introduction')).toBeLessThan(html.indexOf('learning-toc'));expect(html.indexOf('guide-introduction')).toBeLessThan(html.indexOf('guide-first-chapter'));
+  expect(html.match(/data-route-heading="learn"/g)).toHaveLength(1);expect(html.match(/<h1/g)).toHaveLength(1);
+ });
+ it('keeps every old chapter route and only shows the introduction on overview',()=>{
+  for(const chapterId of chapterIds){const html=renderToStaticMarkup(createElement(LearningGuide,{chapterId,bundle:null,checkpoint:0,onCheckpoint:()=>{},returnStep:2}));expect(html.includes('class="guide-introduction"')).toBe(chapterId==='overview');expect(html.match(/data-route-heading="learn"/g)).toHaveLength(1);}
+ });
 });

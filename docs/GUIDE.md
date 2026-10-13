@@ -1,5 +1,29 @@
 # A language model, from zero / ゼロから言語モデルを育てる
 
+## Before you begin: what is an LLM? / はじめに：LLMって、どんなもの？
+
+**LLM** means **Large Language Model**. It learns patterns from large amounts of text by adjusting many internal numbers, called parameters. Given some text, it predicts a next small piece, then repeats to build a response. A piece is called a **token**; many modern LLMs use word pieces, whole words or characters depending on the text. LLM-powered apps can help answer questions, draft text and translate. Fluent output can still be wrong, so check important information. These are numerical predictions, not human experience or a guarantee of understanding. An app may add web search, but the underlying model does not automatically search or verify sources.
+
+**LLM**は **Large Language Model（大規模言語モデル）** の略です。大量の文章を使い、中にあるたくさんの数値（パラメータ）を調整して、言葉の使われ方を学びます。入力から次の小さな文字列を予測し、繰り返して返答を作ります。この単位が**トークン**です。現在の多くのLLMは、文章に応じて単語の一部分・単語・文字などを使います。質問への回答、下書き、翻訳などに使われますが、自然な文章でも間違うことがあります。大切な情報は確かめましょう。数値による予測は、人の経験や理解をそのまま再現するものではありません。検索機能を組み合わせたアプリもありますが、モデルだけで毎回ネットや出典を確認するわけではありません。
+
+### What this guide explains / このガイドで分かること
+
+The **included first-lm reference** is a tiny character-level Transformer with **62,064 parameters**, trained on repetitive project-written English/Japanese sentence patterns. Transformer is a design used by many LLMs. This tiny version exposes shared basics of prediction and learning. It is not a large chat assistant, and success on this toy corpus does not establish general language ability.
+
+**同梱のfirst-lm参照モデル**は、**62,064個のパラメータ**を持つ小さな文字単位のTransformerです。この教材用の、似た形の短い英語・日本語の文で学びます。Transformerは多くのLLMで使う仕組みです。この小さな版で、共通する予測・学習の基本を観察できますが、大規模な会話AIと同じ能力はありません。この例文での成功は、言葉全般を使いこなせる証拠にはなりません。
+
+Follow **text → numbers → prediction → checking → adjustment**. Training repeats prediction, checking and adjustment. Then **generation uses saved numbers held fixed**, adding text one piece at a time. Learn how text becomes a prediction, what training changes, how separate check data helps evaluate it, and why errors remain.
+
+**文章 → 数値 → 予測 → 答え合わせ → 調整**を追います。学習では、予測・答え合わせ・調整を繰り返します。そのあと、**生成では保存した数値を固定**して、続きを少しずつ付け足します。文章から予測を作る方法、学習で変わるもの、別に取っておいた文章で効果を確かめる理由、間違いが残る理由を学びます。
+
+Start with the [eight-chapter browser guide](https://first-lm.kurosawart.chatgpt.site/#/learn/overview): a short “the ca” → “t” example, a labeled picture, then an unscored question. No AI background or formulas are needed. Real model numbers, deeper mechanisms and math/code are optional. The sections below are a more technical companion.
+
+まずは[ブラウザーの8章のガイド](https://first-lm.kurosawart.chatgpt.site/#/learn/overview)で、「the ca」の次は「t」という例を、短い説明・図・採点しない確認問題で追ってみましょう。AIの予備知識や数式は不要です。本物の数値、詳しい仕組み、数式とコードは必要なときに開けます。以下は、その先の技術的な補助教材です。
+
+**Outside this guide:** large-scale pretraining, additional training to follow chat instructions, learning from human feedback (RLHF), image/audio models and production service operations.
+
+**扱わないこと:** 巨大なデータでの事前学習、会話の指示に従う追加学習、人の評価を使う学習（RLHF）、画像・音声モデル、実用サービスの運用。
+
 ## 1. Start with text / まず文章
 
 A language model predicts a next token from a context. Here a token is one Unicode code point, plus three reserved tokens: unknown, beginning of document and end of document. This choice makes the whole pipeline visible. It does not reproduce the efficient subword tokenization used by most large models.

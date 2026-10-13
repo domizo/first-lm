@@ -12,7 +12,7 @@ Actual Chromium screenshot of the bundled measured run. Hosted mode is recorded-
 
 ## Learn inside the app
 
-Use **Guide** in the header, or **Start the learning path** above the experiment. Eight directly linkable chapters explain why each part is needed, then connect it to mechanisms, equations, and the actual implementation. The beginner layer follows one missing-letter example, “the ca” → “t”, through plain explanations, labeled illustrations, and unscored explain-your-choice questions. Terms are defined as they appear. Real saved-model probes and advanced math/code stay in optional deeper sections.
+Use **Guide** in the header, or **Start the learning path** above the experiment. The opening explains what an LLM is, how this small teaching model differs, and what you will learn. Eight directly linkable chapters explain why each part is needed, then connect it to mechanisms, equations, and the actual implementation. The beginner layer follows one missing-letter example, “the ca” → “t”, through plain explanations, labeled illustrations, and unscored explain-your-choice questions. Terms are defined as they appear. Real saved-model probes and advanced math/code stay in optional deeper sections.
 
 - `#/learn/overview`: training changes weights; generation uses fixed weights
 - `#/learn/embeddings`: inspect real token and position embedding values
