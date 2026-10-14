@@ -20,9 +20,9 @@ Follow **text → numbers → prediction → checking → adjustment**. Training
 
 **文章 → 数値 → 予測 → 答え合わせ → 調整**を追います。学習では、予測・答え合わせ・調整を繰り返します。そのあと、**生成では保存した数値を固定**して、続きを少しずつ付け足します。文章から予測を作る方法、学習で変わるもの、別に取っておいた文章で効果を確かめる理由、間違いが残る理由を学びます。
 
-Start with the [eight-chapter local browser guide](http://127.0.0.1:5173/#/learn/overview): a short “the ca” → “t” example, a labeled picture, then an unscored question. No AI background or formulas are needed. Real model numbers, deeper mechanisms and math/code are optional. The sections below are a more technical companion.
+Start with the [eight-chapter local browser guide](http://127.0.0.1:5173/#/learn/overview): a short “the ca” → “t” example, a labeled picture, then a choice with a specific explanation. Each option explains its consequences and points to the relevant diagram; you can compare both without scores or a progress gate. No AI background or formulas are needed. Real model numbers, deeper mechanisms and math/code are optional. The sections below are a more technical companion.
 
-まずは[ローカルの8章のガイド](http://127.0.0.1:5173/#/learn/overview)で、「the ca」の次は「t」という例を、短い説明・図・採点しない確認問題で追ってみましょう。AIの予備知識や数式は不要です。本物の数値、詳しい仕組み、数式とコードは必要なときに開けます。以下は、その先の技術的な補助教材です。
+まずは[ローカルの8章のガイド](http://127.0.0.1:5173/#/learn/overview)で、「the ca」の次は「t」という例を、短い説明・図・理由を確かめる問いで追ってみましょう。どちらを選んでも、その考え方で何が起きるかと、図のどこを見るかを説明します。点数や進行の条件はなく、選び直して比べられます。AIの予備知識や数式は不要です。本物の数値、詳しい仕組み、数式とコードは必要なときに開けます。以下は、その先の技術的な補助教材です。
 
 **Outside this guide:** large-scale pretraining, additional training to follow chat instructions, learning from human feedback (RLHF), image/audio models and production service operations.
 

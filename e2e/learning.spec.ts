@@ -1,3 +1,4 @@
+import {checks} from '../src/lib/checkContent';
 import {expect,test} from '@playwright/test';
 import type {Page,TestInfo} from '@playwright/test';
 import {chapterIds} from '../src/lib/routes';
@@ -30,8 +31,8 @@ test('beginner path: bilingual illustrated chapters, low-pressure questions, and
   await expect(page.locator('.beginner-diagram')).toHaveAttribute('data-chapter',chapter);await expect(page.locator('.diagram-heading')).toContainText('Explanatory illustration');await expect(page.locator('.lesson-takeaway')).not.toBeEmpty();await expect(page.locator('.lesson-glossary dt')).toHaveCount(3);await expect(page.locator('.lesson-real-details')).not.toHaveAttribute('open','');await noOverflow(page);
   const path=info.outputPath(`beginner-${chapter}-diagram-desktop-en.png`);await page.locator('.beginner-diagram').screenshot({path});await info.attach(`beginner-${chapter}-diagram-desktop-en`,{path,contentType:'image/png'});
  }
- await page.locator('.learning-toc a[href="#/learn/overview"]').click();await page.locator('.check-choices button').last().focus();await page.keyboard.press('Enter');await expect(page.locator('.check-feedback')).toContainText('Here is the part to look at');await page.locator('.check-choices button').first().focus();await page.keyboard.press('Space');await expect(page.locator('.check-feedback')).toContainText('That fits the diagram');
- await page.getByRole('button',{name:'JA',exact:true}).click();await expect(page.locator('.check-choices button').first()).toHaveAttribute('aria-pressed','true');await expect(page.locator('.check-feedback')).toContainText('図と合っています');await page.setViewportSize({width:390,height:844});
+ await page.locator('.learning-toc a[href="#/learn/overview"]').click();await page.locator('.check-choices button').last().focus();await page.keyboard.press('Enter');await expect(page.locator('.check-feedback')).toContainText(checks.overview.options[1].reason[0]);await page.locator('.check-choices button').first().focus();await page.keyboard.press('Space');await expect(page.locator('.check-feedback')).toContainText(checks.overview.options[0].reason[0]);
+ await page.getByRole('button',{name:'JA',exact:true}).click();await expect(page.locator('.check-choices button').first()).toHaveAttribute('aria-pressed','true');await expect(page.locator('.check-feedback')).toContainText(checks.overview.options[0].reason[1]);await page.setViewportSize({width:390,height:844});
  for(const chapter of chapterIds){
   await page.locator(`.learning-toc a[href="#/learn/${chapter}"]`).click();await expect(page.locator('.diagram-heading')).toContainText('説明用の図');await noOverflow(page);await screenshot(page,info,`beginner-${chapter}-mobile-ja`);
   const path=info.outputPath(`beginner-${chapter}-diagram-mobile-ja.png`);await page.locator('.beginner-diagram').screenshot({path});await info.attach(`beginner-${chapter}-diagram-mobile-ja`,{path,contentType:'image/png'});

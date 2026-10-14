@@ -1,15 +1,40 @@
 import {useState} from 'react';
 import {useI18n} from '../lib/i18n';
 import type {ChapterId} from '../lib/routes';
-type Copy=[string,string];
-export const checks:Record<ChapterId,{question:Copy;choices:Copy[];correct:number;explanation:Copy}>={
- overview:{question:['As generated letters are added, what is updated?','生成した文字を付け足すと、何が変わる？'],choices:[['The generated text and the input used next','できた文章と、次に使う入力'],['The model automatically studies and changes its saved numbers','自動で勉強して、保存した数値も変わる']],correct:0,explanation:['Generating uses the saved numbers. The chosen letters become new input, but there is no training update.','生成は保存した数値を使います。選んだ文字は次の入力になりますが、学習の更新はしません。']},
- data:{question:['Where does the practice answer “t” come from?','練習の答え「t」は、どこから来る？'],choices:[['A person must type it for every training step','人が毎回、答えを入力する'],['It is the next character already written in “the cat”','元の文章「the cat」の次の文字']],correct:1,explanation:['We hide part of text that already exists. Its next letter becomes the answer automatically. People choose the training text, but do not answer every generated practice problem.','すでにある文章の続きを隠します。その次の文字が自動的に答えになります。人は学習に使う文章を用意しますが、毎回の問題に答えるわけではありません。']},
- embeddings:{question:['Does ID 7 mean a letter is more important than ID 3?','番号7の文字は、番号3の文字より重要？'],choices:[['Yes: a larger ID means greater importance','はい。番号が大きいほど重要'],['No: the IDs are just lookup labels','いいえ。探すための目印にすぎない']],correct:1,explanation:['A locker numbered 7 is not smarter than locker 3. Likewise, an ID only selects the right number list. Training changes the list, not the meaning of the ID number.','7番のロッカーが3番より賢いわけではありません。同じように、番号は数値のリストを選ぶ目印です。学習で変えるのはリストの数値で、番号の大小に意味を付けるわけではありません。']},
- attention:{question:['While predicting after “the ca”, may the model look at the next “t”?','「the ca」の次を予測するとき、この先の「t」を見てもよい？'],choices:[['No: that would reveal the answer','だめ。答えを先に見てしまう'],['Yes: it needs to read the answer to make its prediction','よい。予測する前に答えを読む必要がある']],correct:0,explanation:['First predict without the future letter. Afterward, the training calculation compares the prediction with that letter. Prediction and checking are separate steps.','まず未来の文字を見ずに予測し、その後で学習の計算が答えの文字と比べます。予測する段階と、答え合わせの段階は別です。']},
- loss:{question:['The answer is t. Which prediction has a smaller penalty?','正解は t。損失が小さいのはどちら？'],choices:[['20% chance for t','t の確率が20%'],['70% chance for t','t の確率が70%']],correct:1,explanation:['For the same answer, a higher probability gives a smaller loss. It still does not guarantee the sampled letter or the whole sentence will be correct.','同じ正解なら、その確率が高いほど損失は小さくなります。ただし、実際に選ばれる文字や文章全体が必ず正しくなるわけではありません。']},
- optimization:{question:['Does one adjustment have to improve every practice example?','1回の調整で、すべての練習問題がよくなる？'],choices:[['No: check the overall trend across many updates','必ずではない。何度も調整した全体の傾向を見る'],['Yes: otherwise the training must be broken','必ずよくなる。そうでなければ学習が壊れている']],correct:0,explanation:['The model shares its numbers across many examples. An update can help some and hurt others. The size of adjustments and the evaluation results both matter.','多くの問題で同じ数値を使うので、ある問題によい調整が別の問題にはよくないこともあります。調整の大きさと、評価の結果を確かめます。']},
- evaluation:{question:['A good score on these short template sentences proves what?','この短い定型文でよい成績なら、何が分かる？'],choices:[['The model can answer any question correctly','どんな質問にも正しく答えられる'],['It predicts these measured patterns fairly well','測った範囲のパターンを、よく予測できる']],correct:1,explanation:['The check texts still resemble the practice texts. This is useful evidence for a small task, not proof of broad knowledge or understanding.','確認用の文章も練習用と似ています。小さな課題で学べた証拠にはなりますが、幅広い知識や理解の証明にはなりません。']},
- generation:{question:['What does turning up temperature do?','温度を上げると、何が変わる？'],choices:[['It spreads out the next-letter chances without retraining','学習し直さずに、次の文字の確率を分散させる'],['It teaches new facts and makes answers more accurate','新しい知識を教えて、答えを正確にする']],correct:0,explanation:['Temperature changes the selection rule applied to the same scores. Text may vary more, or stay the same. The saved model numbers and knowledge do not increase.','温度は、同じスコアから文字を選ぶルールを変えます。文章が変わりやすくなっても、同じになる場合もあります。保存した数値や知識が増えるわけではありません。']},
-};
-export default function QuickCheck({chapter}:{chapter:ChapterId}){const {t}=useI18n(),[choice,setChoice]=useState<number|null>(null);const q=checks[chapter];return <section className="quick-check" aria-labelledby={`check-${chapter}`}><span className="level-label">{t('Pause & think · no score','ひとつ考えてみよう・採点はしません')}</span><h3 id={`check-${chapter}`}>{t(...q.question)}</h3><div className="check-choices" role="group" aria-labelledby={`check-${chapter}`}>{q.choices.map((c,i)=><button key={i} aria-pressed={choice===i} onClick={()=>setChoice(i)}>{t(...c)}</button>)}</div><div className="check-feedback" role="status">{choice!==null&&<><strong>{choice===q.correct?t('That fits the diagram.','図と合っています。'):t('Here is the part to look at.','ここに注目してみましょう。')}</strong><p>{t(...q.explanation)}</p></>}</div></section>;}
+import {checks} from '../lib/checkContent';
+export {checks} from '../lib/checkContent';
+
+export default function QuickCheck({chapter}:{chapter:ChapterId}) {
+  const {t}=useI18n();
+  const [selection,setSelection]=useState<{chapter:ChapterId;index:number}|null>(null);
+  const [missingCue,setMissingCue]=useState(false);
+  const q=checks[chapter], choice=selection?.chapter===chapter?selection.index:null;
+  const selected=choice===null?null:q.options[choice];
+  function showCue(){
+    const target=document.getElementById(q.targetId);
+    if(!target){setMissingCue(true);return;}
+    setMissingCue(false);
+    target.focus({preventScroll:true});
+    target.scrollIntoView({block:'center',behavior:'instant'});
+  }
+  return <section className="quick-check" aria-labelledby={`check-${chapter}`}>
+    <span className="level-label">{t('Choose, then explore the reason','選んで、理由を確かめよう')}</span>
+    <p className="check-purpose">{t('Make a prediction. Each choice explains what that idea would mean and where to check it in the diagram. Try the other choice too; there are no points or progress requirements.','まず予想を1つ選んでみましょう。その考え方では何が起きるかと、図で確かめる場所を説明します。選び直して比べられます。点数や、先へ進むための条件はありません。')}</p>
+    <h3 id={`check-${chapter}`}>{t(...q.question)}</h3>
+    <div className="check-choices" role="group" aria-labelledby={`check-${chapter}`}>
+      {q.options.map((option,index)=><button key={index} type="button" aria-pressed={choice===index} onClick={()=>{setSelection({chapter,index});setMissingCue(false);}}>
+        <span>{t(...option.label)}</span>{choice===index&&<small aria-hidden="true">{t('Selected','選択中')}</small>}
+      </button>)}
+    </div>
+    <div className="check-feedback" role="status" aria-live="polite" aria-atomic="true">
+      {selected?<>
+        <p className="check-selected"><span>{t('Your choice: ','選んだ考え：')}</span>{t(...selected.label)}</p>
+        <h4>{t(...selected.heading)}</h4>
+        <p className="check-reason">{t(...selected.reason)}</p>
+        <div className="check-cue-copy"><strong>{t('What to look at in the diagram','図で確かめるところ')}</strong><p>{t(...selected.cue)}</p></div>
+      </>:<p className="check-awaiting">{t('Choose either idea to see its explanation here.','どちらかを選ぶと、その理由がここに表示されます。')}</p>}
+    </div>
+    {selected&&<div className="check-evidence-action"><button type="button" className="button secondary" onClick={showCue}>{t('Show the relevant part of the diagram','図の該当部分を枠で示す')} <span aria-hidden="true">↑</span></button><p>{t('This moves focus to the diagram above. It does not reset your controls or change the model.','上の図へ移動して、該当する部分にフォーカスします。つまみの設定やモデルは変えません。')}</p></div>}
+    {missingCue&&<p role="alert">{t('The diagram is not available here. Use the written cue above.','ここでは図が見つかりません。上の「図で確かめるところ」を参照してください。')}</p>}
+  </section>;
+}

@@ -57,7 +57,7 @@ function ProbabilityLoss() {
     <h3 id={`${id}-title`}>{t('How much chance did the answer get?','正解に、どのくらい確率を付けた？')}</h3>
     <p className="toy-intro">{t('The next letter after “the ca” is t in this example. Move the slider and watch how its probability changes the loss.','この例では「the ca」の次の正解は t。つまみを動かして、正解の確率と損失の関係を見てみましょう。')}</p>
     <div className="toy-loss-layout">
-      <div className="toy-loss-controls">
+      <div className="toy-loss-controls" id="check-cue-loss" data-check-cue="loss" tabIndex={-1} role="group" aria-label={t('Correct-letter probability and loss','正解の文字の確率と損失')}>
         <label className="toy-slider-label" htmlFor={`${id}-probability`}><span>{t('Chance of the correct letter t','正解 t の確率')}</span><output htmlFor={`${id}-probability`}>{probabilityPercent}%</output></label>
         <input id={`${id}-probability`} type="range" min="1" max="99" step="1" value={probabilityPercent} aria-valuetext={`${probabilityPercent}%`} onChange={event => setProbabilityPercent(clampToyInput(Number(event.target.value), 1, 99, 20))}/>
         <div className="toy-range-ends" aria-hidden="true"><span>1%</span><span>99%</span></div>

@@ -28,7 +28,7 @@ export default function ContextExplorer() {
         <span className="sr-only">{x.state==='visible'?t('inside window','窓の中'):x.state==='older'?t('outside window','窓より前'):t('hidden future','未来のため見えない')}{x.target?t(', next-letter answer','、次の文字の答え'):''}</span>
       </li>)}
     </ol>
-    <p className="context-target">{t('Next-letter answer, kept hidden from this prediction:','この予測には見せない、次の文字の答え：')} <code>{show(tokens[boundary+1])}</code></p>
+    <p className="context-target" id="check-cue-attention" data-check-cue="attention" tabIndex={-1}>{t('Next-letter answer, kept hidden from this prediction:','この予測には見せない、次の文字の答え：')} <code>{show(tokens[boundary+1])}</code></p>
     <div className="context-crop"><strong>{t('Only these tokens enter this prediction','この予測の計算に入るのは、ここだけ')}</strong>
       <ol>{visible.map(x=><li key={x.position}><code>{show(x.token)}</code><small>{t('Window position','窓の中の位置')} {x.windowPosition}</small></li>)}</ol>
     </div>

@@ -21,11 +21,11 @@ describe('beginner learning path',()=>{
    expect(chapter.codePath).toMatch(/^(python|src)\//);
   });
   it(`${id} labels its explanatory diagram in both languages`,()=>{
-   for(const language of ['en','ja'] as const){const html=diagram(id,language);expect(html).toContain(`data-chapter="${id}"`);expect(html).toContain('<figcaption>');expect(html).toContain(language==='en'?'Explanatory illustration':'説明用の図');expect(html).not.toContain('<img');}
+   for(const language of ['en','ja'] as const){const html=diagram(id,language);expect(html).toContain(`data-chapter="${id}"`);expect(html).toMatch(/<figcaption(?:>| )/);expect(html).toContain(language==='en'?'Explanatory illustration':'説明用の図');expect(html).not.toContain('<img');}
   });
   it(`${id} offers two explained choices without a scored test`,()=>{
-   const check=checks[id];expect(check.choices).toHaveLength(2);expect([0,1]).toContain(check.correct);
-   for(const copy of [check.question,...check.choices,check.explanation])for(const text of copy)expect(text.length).toBeGreaterThan(5);
+   const check=checks[id];expect(check.options).toHaveLength(2);expect([0,1]).toContain(check.correct);
+   for(const copy of [check.question,...check.options.flatMap(option=>[option.label,option.heading,option.reason,option.cue])])for(const text of copy)expect(text.length).toBeGreaterThan(5);
    const html=renderToStaticMarkup(createElement(QuickCheck,{chapter:id}));expect(html.match(/aria-pressed="false"/g)).toHaveLength(2);expect(html).toContain('role="status"');
   });
  }
