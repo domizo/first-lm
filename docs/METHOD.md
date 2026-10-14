@@ -41,6 +41,10 @@ The corpus has exact deduplication and document-first partitioning, but its docu
 
 The 24 and 48 results are close; the longer context does not uniformly win. This paired evaluation uses a different sampling scheme than the learning-curve metric, so the values need not match 0.2157. The complete result and corpus hash are in `context-experiment.json`.
 
+## Historical provenance and supported runtime
+
+The table and saved artifacts above retain their original PyTorch 2.9.1 provenance. New installations use PyTorch 2.13.0 for security fixes. A checked 600-step run with otherwise preserved dependency versions reached held-out loss 0.21616967, but its final tensors and logged losses were not bit-identical to the historical run. The model architecture, original corpus, saved weights and recorded metrics have not been replaced. See [dependency notes](DEPENDENCIES.md) for the exact comparison and audit scope.
+
 ## Reproducibility
 
 The run records code configuration, data hash, versions, device and seeds. A local optimizer checkpoint preserves AdamW state and both training RNG states. Tests verify identical tensors after cancellation/resumption versus uninterrupted training in the same environment. Browser Float64 arithmetic differs from PyTorch Float32; full logits match within 2e-5 in parity tests, and selected seeded generation cases match exactly. Cross-version/device bitwise equality is not promised.

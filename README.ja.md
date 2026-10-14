@@ -24,34 +24,76 @@
 - **ローカルで実際に学習**: Python サーバーを起動すると、ブラウザから CPU 学習・停止・保存・再開ができます
 - **実測済みの記録を確認**: 静的サイトでは、実際の学習ログを表示します。文章の生成は、保存した本物の重みを使ってブラウザ内で計算します。静的サイトで Python が動いているようには表示しません
 
-## 起動
+## ソースを取得
 
-Python 3.11/3.12 と Node 22.12 以降または 24 を用意します。以下は macOS / Linux の例です。
+GitとNode 22.12以降または24を用意します。Python 3.11/3.12は実際にローカル学習するときだけ必要です。Python依存関係には約1 GBの空き容量を見込んでください。GPUは不要です。リポジトリが非公開の間は、cloneするためのアクセス権が必要です。
 
 ```sh
+git clone https://github.com/domizo/first-lm.git
+cd first-lm
+npm ci
+```
+
+## まずガイドと保存済みの実験を見る
+
+```sh
+npm run dev
+```
+
+[ローカルの学習ガイド](http://127.0.0.1:5173/#/learn/overview)を開くか、http://127.0.0.1:5173 の **ガイド** を選びます。ターミナルは起動したままにしてください。ポートが使われている場合は、Viteが表示したローカルURLに `#/learn/overview` を付けます。
+
+Pythonサーバーを起動していなくても、ガイド・実際の学習記録・保存した重みによるブラウザー内の文章生成を使えます。このモードにはPython、アカウント、APIキー、ホストされたデモへのアクセスは不要です。開発サーバーは、別途起動してあるローカルPythonサーバーにも `/api` プロキシで接続できます。
+
+静的ビルドを確認する場合は次を実行します。
+
+```sh
+npm run build
+npm run preview
+```
+
+[ビルド後のローカルガイド](http://127.0.0.1:4173/#/learn/overview)を開きます。この静的プレビューにはPython APIのプロキシがなく、実際の学習は開始できません。`dist/` にはアプリ、自作コーパス、実測の学習記録、第三者ライセンスを含みます。`dist/index.html` を `file://` で直接開かず、プレビューサーバーを使ってください。
+
+## 実際にローカルで学習する
+
+同じプロジェクトのディレクトリで、Pythonの仮想環境を作ります。
+
+```sh
+# macOS / Linux
 python3 -m venv .venv
 source .venv/bin/activate
+```
+
+Windows PowerShellでは、上の2行の代わりに次を使います。
+
+```powershell
+py -3.12 -m venv .venv
+.venv\Scripts\Activate.ps1
+```
+
+Pythonサーバーの依存関係を入れ、ブラウザーUIをビルドします。`constraints.txt` が監査した依存バージョンを選ぶため、検証済み環境の再現時は削除しないでください。
+
+```sh
 python -m pip install -r requirements.txt
-# macOS
-python -m pip install torch==2.9.1
-# Linux / Windows の CPU 専用版はこちら
-# python -m pip install torch==2.9.1 --index-url https://download.pytorch.org/whl/cpu
-npm ci
+# Linux / Windows: 公式のCPU専用PyTorch
+python -m pip install torch==2.13.0 --index-url https://download.pytorch.org/whl/cpu -c constraints.txt
+# macOSでは上のPyTorch行の代わりに: python -m pip install torch==2.13.0 -c constraints.txt
+python -m pip install -e . --no-deps --no-build-isolation
 npm run build
-python -m pip install -e . --no-deps
 python -m model_lab serve
 ```
 
-http://127.0.0.1:8765 を開きます。ターミナルは起動したままにしてください。外部ネットワークに公開するためのサーバーではありません。Windows PowerShell では仮想環境の有効化を `.venv\Scripts\Activate.ps1` に置き換えてください。
+**http://127.0.0.1:8765**、またはその[学習ガイド](http://127.0.0.1:8765/#/learn/overview)を開きます。Pythonが配信するこの版では、CPUでの実際の学習・保存・停止・再開ができます。ターミナルは起動したままにし、サーバーを止めるときはCtrl+Cを押します。認証情報は不要で、接続先はループバックだけです。外部ネットワークには公開しないでください。環境に合うPyTorchがない場合は[公式のインストール案内](https://pytorch.org/get-started/locally/)を確認してください。
 
-記録の閲覧とブラウザ内生成だけなら `npm ci` → `npm run dev` でも動作します。
+再開するのは、自分の信頼できるfirst-lm実行で作ったチェックポイントだけにしてください。ブラウザーで読み込めるのは上限付きJSONで、`.pt` アップロード機能はありません。`weights_only=True` はpickleの危険を減らす仕組みですが、信頼できないチェックポイントの安全を保証しません。
 
-## 同じ実験を再現
+## 参照実験と同じ設定で学習
 
 ```sh
 python -m model_lab train --steps 600 --output runs/my-run
 python -m model_lab train --steps 900 --output runs/my-run --resume
 ```
+
+現在の対応環境はPyTorch 2.13.0です。同梱記録は2.9.1で作ったまま保存しています。同じ600ステップの設定で学習できますが、版をまたいだ重みの完全一致はしません。新しい実行と過去の実測値を区別してください。[依存関係・互換性の記録](docs/DEPENDENCIES.md)に詳細があります。
 
 `--steps` は追加回数ではなく、到達する合計ステップ数です。保存した optimizer と乱数状態も復元します。再開時に変更できるのは到達ステップ数と評価間隔だけです。新しい設定を試す場合は新しい実験を開始します。
 
@@ -68,3 +110,11 @@ python -m model_lab train --steps 900 --output runs/my-run --resume
 同梱データは576件の自作定型文です。検証用文書にも同じ語彙や文型が含まれます。小さい loss は一般的な言語能力を示しません。生成された不自然な文も、そのまま表示します。
 
 [詳しい教材](docs/GUIDE.md) · [測定方法](docs/METHOD.md) · [英語の詳しい起動・検証手順](README.md)
+
+## 第三者ライセンス
+
+[ブラウザー依存関係の告知](THIRD_PARTY_NOTICES.md)に、ビルドへ同梱するReact・React DOM・Schedulerの正確な著作権表示とライセンス原文を収録しています。画面下部からも開けます。
+
+## ライセンス
+
+このプロジェクトの自作コード・自作の学習データ・同梱する学習済み重みは、著作権表示を2026 domizoとする[MITライセンス](LICENSE)です。条件に従って商用利用・改変・再配布ができ、著作権表示とライセンス文を残す必要があります。[データの出自](data/DATA.md)と[重みの利用条件・記録](WEIGHTS.md)も確認してください。第三者パッケージは各自のライセンスのままです。利用者が追加する文章を、このプロジェクトのMITに変更するものではありません。

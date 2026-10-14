@@ -13,3 +13,6 @@ coverage/
 .DS_Store
 # Local visual reference and review working files.
 docs/design/
+
+audit-results/
+.audit-venv/

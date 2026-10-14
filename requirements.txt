@@ -1,4 +1,7 @@
+-c constraints.txt
 # Install CPU PyTorch separately; see README for platform-specific instructions.
 fastapi>=0.115,<1
 uvicorn>=0.30,<1
 numpy>=2,<3
+# Preinstall the audited build helper from PyPI before the CPU-only index.
+setuptools>=77.0.3

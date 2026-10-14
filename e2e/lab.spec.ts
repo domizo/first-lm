@@ -82,3 +82,10 @@ test('local companion: actual training, cancellation, reload and resume',async({
  await expect.poll(async()=>{return (await (await request.get('http://127.0.0.1:8765/api/status')).json()).status;},{timeout:90000}).toBe('completed');
  await expect(page.getByText('Local training run',{exact:true})).toBeVisible();body=await (await request.get('http://127.0.0.1:8765/api/status')).json();expect(body.runId).toBe(id);expect(body.bundle.checkpoints.at(-1).step).toBe(target);await screenshot(page,info,'local-resumed-desktop');
 });
+
+test('bundled third-party notices: exact served text and bilingual footer access',async({page,request},info)=>{
+ const source=await fs.readFile('public/THIRD_PARTY_NOTICES.txt','utf8');const response=await request.get('/THIRD_PARTY_NOTICES.txt');expect(response.status()).toBe(200);expect(await response.text()).toBe(source);const license=await request.get('/LICENSE.txt');expect(license.status()).toBe(200);expect(await license.text()).toBe(await fs.readFile('LICENSE','utf8'));
+ await page.goto('/#/learn/overview');const link=page.getByRole('link',{name:'Third-party notices',exact:true});await expect(link).toHaveAttribute('href','./THIRD_PARTY_NOTICES.txt');
+ const opened=page.waitForEvent('popup');await link.click();const popup=await opened;await expect(popup.locator('body')).toContainText('react 19.3.0');await expect(popup.locator('body')).toContainText('scheduler 0.28.0');await popup.close();await expect(page).toHaveURL(/#\/learn\/overview$/);
+ await page.getByRole('button',{name:'JA',exact:true}).click();await page.setViewportSize({width:390,height:844});await expect(page.getByRole('link',{name:'第三者ライセンス',exact:true})).toBeVisible();await expectNoOverflow(page);const file=info.outputPath('footer-notices-mobile-ja.png');await page.locator('.app-footer').screenshot({path:file});await info.attach('footer-notices-mobile-ja',{path:file,contentType:'image/png'});
+});

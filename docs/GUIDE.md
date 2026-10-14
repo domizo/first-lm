@@ -1,5 +1,9 @@
 # A language model, from zero / ゼロから言語モデルを育てる
 
+Run the app with `npm ci` → `npm run dev` after [cloning the repository](../README.md#get-the-source). Then open the local guide below; it requires no hosted-demo access. For real training, use the Python companion described in the README.
+
+[リポジトリを取得](../README.ja.md#ソースを取得)して `npm ci` → `npm run dev` を実行してから、下のローカルガイドを開いてください。ホストされたデモへのアクセスは不要です。実際の学習にはREADMEのPythonサーバーを使います。
+
 ## Before you begin: what is an LLM? / はじめに：LLMって、どんなもの？
 
 **LLM** means **Large Language Model**. It learns patterns from large amounts of text by adjusting many internal numbers, called parameters. Given some text, it predicts a next small piece, then repeats to build a response. A piece is called a **token**; many modern LLMs use word pieces, whole words or characters depending on the text. LLM-powered apps can help answer questions, draft text and translate. Fluent output can still be wrong, so check important information. These are numerical predictions, not human experience or a guarantee of understanding. An app may add web search, but the underlying model does not automatically search or verify sources.
@@ -16,9 +20,9 @@ Follow **text → numbers → prediction → checking → adjustment**. Training
 
 **文章 → 数値 → 予測 → 答え合わせ → 調整**を追います。学習では、予測・答え合わせ・調整を繰り返します。そのあと、**生成では保存した数値を固定**して、続きを少しずつ付け足します。文章から予測を作る方法、学習で変わるもの、別に取っておいた文章で効果を確かめる理由、間違いが残る理由を学びます。
 
-Start with the [eight-chapter browser guide](https://first-lm.kurosawart.chatgpt.site/#/learn/overview): a short “the ca” → “t” example, a labeled picture, then an unscored question. No AI background or formulas are needed. Real model numbers, deeper mechanisms and math/code are optional. The sections below are a more technical companion.
+Start with the [eight-chapter local browser guide](http://127.0.0.1:5173/#/learn/overview): a short “the ca” → “t” example, a labeled picture, then an unscored question. No AI background or formulas are needed. Real model numbers, deeper mechanisms and math/code are optional. The sections below are a more technical companion.
 
-まずは[ブラウザーの8章のガイド](https://first-lm.kurosawart.chatgpt.site/#/learn/overview)で、「the ca」の次は「t」という例を、短い説明・図・採点しない確認問題で追ってみましょう。AIの予備知識や数式は不要です。本物の数値、詳しい仕組み、数式とコードは必要なときに開けます。以下は、その先の技術的な補助教材です。
+まずは[ローカルの8章のガイド](http://127.0.0.1:5173/#/learn/overview)で、「the ca」の次は「t」という例を、短い説明・図・採点しない確認問題で追ってみましょう。AIの予備知識や数式は不要です。本物の数値、詳しい仕組み、数式とコードは必要なときに開けます。以下は、その先の技術的な補助教材です。
 
 **Outside this guide:** large-scale pretraining, additional training to follow chat instructions, learning from human feedback (RLHF), image/audio models and production service operations.
 

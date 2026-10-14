@@ -22,9 +22,17 @@ jobs:
       - name: Install dependencies
         run: |
           npm ci
-          python -m pip install torch==2.9.1 --index-url https://download.pytorch.org/whl/cpu
           python -m pip install -r requirements-dev.txt
-          python -m pip install -e . --no-deps
+          python -m pip install torch==2.13.0 --index-url https://download.pytorch.org/whl/cpu -c constraints.txt
+          python -m pip install -e . --no-deps --no-build-isolation
+          python -m pip check
+      - name: Dependency audit
+        run: |
+          mkdir -p audit-results
+          npm audit --json > audit-results/npm-audit.json
+          python -m venv /tmp/first-lm-audit
+          /tmp/first-lm-audit/bin/python -m pip install pip-audit==2.10.1
+          /tmp/first-lm-audit/bin/python -m pip_audit -r constraints.txt --no-deps --disable-pip --strict -f json -o audit-results/python-audit.json
       - name: Type and inference checks
         run: |
           npm run check
@@ -44,4 +52,5 @@ jobs:
           path: |
             playwright-report/
             test-results/
+            audit-results/
           retention-days: 14

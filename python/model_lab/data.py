@@ -63,7 +63,7 @@ def prepare_dataset(docs: list[str] | None = None, seed: int = 17) -> Dataset:
     train=[encode(x) for x in train_docs]; validation=[encode(x) for x in validation_docs]
     digest=hashlib.sha256(json.dumps(docs,ensure_ascii=False,separators=(',',':')).encode()).hexdigest()
     metadata=dict(name='Original bilingual toy scenes' if original else 'User-provided local corpus',
-        license='Original project-authored demo text; private project, no public license granted' if original else 'User is responsible for rights to supplied text',
+        license='MIT; original project-authored demo text (see LICENSE)' if original else 'User is responsible for rights to supplied text',
         provenance='Project-authored template sentences; no downloaded corpus.' if original else 'Submitted to the loopback companion by the user; never uploaded by this app.',
         sha256=digest,trainDocuments=len(train),validationDocuments=len(validation),
         trainTokens=sum(map(len,train)),validationTokens=sum(map(len,validation)),
