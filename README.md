@@ -19,7 +19,7 @@ Use **Guide** in the header, or **Start the learning path** above the experiment
 - `#/learn/loss`: compute a real next-character probability and single-target loss
 - `#/learn/generation`: compare saved checkpoints or temperatures under controlled settings
 
-The guide preserves your experiment inputs and output while you read. Browser Back/Forward and direct chapter links work without server-side routes. Structural diagrams are labeled separately from measurements; the single-target probe uses raw training probabilities, whereas comparison bars include sampling filters. Imported run provenance remains self-reported.
+The guide preserves your experiment inputs and output while you read. Browser Back/Forward and direct chapter links work without server-side routes. Structural diagrams and loss, gradient, and update calculations using chosen teaching numbers are labeled separately from values computed from real saved model weights. Illustrative calculations are not presented as attention weights or gradients recorded during real training. The single-target probe uses raw training probabilities, whereas comparison bars include sampling filters. Imported run provenance remains self-reported.
 
 ## Two honest execution modes
 

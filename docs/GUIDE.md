@@ -40,9 +40,9 @@ The browser chapters now include these complementary diagrams. No animation is n
 - **Updates / 数値を調整:** Change the learning rate and perform up to ten direct-score SGD updates on three chosen scores. This one-target toy deliberately omits shared network weights, clipping and AdamW. Its decreasing loss does not imply every real training update improves every example, nor demonstrate excessive-learning-rate failures. / 学習率を選び、仮の3スコアを最大10回更新します。実際のネットワーク全体やAdamWの記録ではありません。この例で損失が下がっても、本物の毎回の改善を保証せず、大きすぎる学習率の失敗を再現するものでもありません。
 - **Generation / 次を選ぶ:** Open the real-model expander. Keep saved step and prompt fixed while moving temperature or top-k: actual scores stay fixed and probability bars change. The optional ribbon shows how one chosen number selects a character. The generator uses repeatable seeded uniform draws; the ribbon slider is an illustration, not a saved random event. / 本物の数値を開き、入力と保存ステップを固定して温度・top-kを変えます。実際のスコアは同じまま、確率が変わります。帯の図では、選んだ数値から1文字を決める規則も確かめられます。実際の生成はシード付き乱数を使い、帯のつまみは説明用です。
 
-None of these controls starts Python training, changes saved model weights, or modifies the experiment screen's input settings. Model-derived values and chosen-number illustrations are labeled separately. The real trainer remains the loopback-only Python companion.
+The saved-checkpoint selector is shared with the experiment screen: choosing another saved step changes which checkpoint both views inspect. It does not overwrite the original weights or data, or start Python training. The illustrative diagram controls and the guide's prompt and sampling controls stay within the guide; they do not change the experiment screen's prompt or sampling settings. Model-derived values and chosen-number illustrations are labeled separately. The real trainer remains the loopback-only Python companion.
 
-これらの操作でPython学習を開始したり、保存した重みや実験画面の入力設定を書き換えたりはしません。モデルから求めた値と説明用の数値は、それぞれ明記しています。実際に学習するのはローカルのPythonサーバーです。
+保存済みチェックポイントの選択は、実験画面と共通です。保存ステップを選び直すと、両方の画面で参照するチェックポイントが変わります。元の重みやデータを書き換えたり、Python学習を開始したりはしません。説明用の図の操作や、ガイド内の入力文・生成方法の設定はガイドの中だけに作用し、実験画面の入力文や生成方法の設定を変えません。モデルから求めた値と説明用の数値は、それぞれ明記しています。実際に学習するのはローカルのPythonサーバーです。
 
 ## 1. Start with text / まず文章
 
