@@ -28,6 +28,22 @@ Start with the [eight-chapter local browser guide](http://127.0.0.1:5173/#/learn
 
 **扱わないこと:** 巨大なデータでの事前学習、会話の指示に従う追加学習、人の評価を使う学習（RLHF）、画像・音声モデル、実用サービスの運用。
 
+## Explore with diagrams / 図を動かして確かめる
+
+The browser chapters now include these complementary diagrams. No animation is needed: sliders, buttons and number labels work with a keyboard, and the static initial view still explains each idea.
+
+ブラウザーの各章では、次の図を動かせます。自動アニメーションは使わず、キーボードでも操作できます。最初に表示される図と数値だけでも、仕組みを読み取れます。
+
+- **Embeddings / 文字を数値に:** Open the real-model expander and compare the two `t` positions in `the cat`. The token vector is reused; a different position vector is added. Signed bars share a zero-centered scale, and show actual saved coordinates before attention. Change the saved step to compare checkpoints. / 本物の数値を開き、2つの `t` を比べます。文字のベクトルは同じで、位置のベクトルが違います。棒は注意計算前の実際の保存値を、共通の目盛りで示します。保存ステップも変えられます。
+- **Attention / 見てよい範囲:** Move the last visible input and a small example window. See both hidden future tokens and older input outside the window; local position numbers restart at 0. This changes the illustration only, not the reference model's fixed 48-token architecture or measured attention. / 入力の境界と説明用の窓を動かし、未来の文字と、古すぎて外れた文字を区別します。窓の中の位置は0から数え直します。実際のモデルの構造や注意重みを変える操作ではありません。
+- **Loss / 予測を採点:** Move the chosen probability of the correct letter `t`. The point follows the exact `−ln(p)` curve; numbers are rounded. These probabilities are explanatory choices, not model measurements. / 正解 `t` の確率を動かすと、式から計算した損失と点が変わります。確率は説明用で、モデルの実測値ではありません。
+- **Updates / 数値を調整:** Change the learning rate and perform up to ten direct-score SGD updates on three chosen scores. This one-target toy deliberately omits shared network weights, clipping and AdamW. Its decreasing loss does not imply every real training update improves every example, nor demonstrate excessive-learning-rate failures. / 学習率を選び、仮の3スコアを最大10回更新します。実際のネットワーク全体やAdamWの記録ではありません。この例で損失が下がっても、本物の毎回の改善を保証せず、大きすぎる学習率の失敗を再現するものでもありません。
+- **Generation / 次を選ぶ:** Open the real-model expander. Keep saved step and prompt fixed while moving temperature or top-k: actual scores stay fixed and probability bars change. The optional ribbon shows how one chosen number selects a character. The generator uses repeatable seeded uniform draws; the ribbon slider is an illustration, not a saved random event. / 本物の数値を開き、入力と保存ステップを固定して温度・top-kを変えます。実際のスコアは同じまま、確率が変わります。帯の図では、選んだ数値から1文字を決める規則も確かめられます。実際の生成はシード付き乱数を使い、帯のつまみは説明用です。
+
+None of these controls starts Python training, changes saved model weights, or modifies the experiment screen's input settings. Model-derived values and chosen-number illustrations are labeled separately. The real trainer remains the loopback-only Python companion.
+
+これらの操作でPython学習を開始したり、保存した重みや実験画面の入力設定を書き換えたりはしません。モデルから求めた値と説明用の数値は、それぞれ明記しています。実際に学習するのはローカルのPythonサーバーです。
+
 ## 1. Start with text / まず文章
 
 A language model predicts a next token from a context. Here a token is one Unicode code point, plus three reserved tokens: unknown, beginning of document and end of document. This choice makes the whole pipeline visible. It does not reproduce the efficient subword tokenization used by most large models.

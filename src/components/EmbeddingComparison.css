@@ -1,0 +1,45 @@
+.embedding-comparison{margin:26px 0 0;padding:23px 0 0;border-top:1px solid var(--border);min-width:0;color:#35433d}
+.embedding-comparison figcaption{margin:0 0 17px}
+.embedding-comparison-evidence{display:block;color:var(--green);font-size:11px;line-height:1.7;font-weight:600;letter-spacing:.03em}
+.embedding-comparison figcaption h3{font-size:19px;line-height:1.55;margin:7px 0 9px}
+.embedding-comparison figcaption p{font-size:13px;line-height:1.85;margin:0}
+.embedding-comparison-sequence{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));list-style:none;padding:0;margin:0;gap:5px;max-width:440px}
+.embedding-comparison-sequence li{display:flex;flex-direction:column;align-items:center;gap:6px;padding:9px 1px 6px;background:#f7f8f7;border:1px solid #e0e5e1;border-radius:4px;min-width:0;color:#657369}
+.embedding-comparison-sequence code{font-size:14px;line-height:1.5}
+.embedding-comparison-sequence li:first-child code{font-size:10px;line-height:2.1}
+.embedding-comparison-sequence li>span{font:10px/1.5 var(--mono)}
+.embedding-comparison-sequence li.is-compared{color:#2f4e3c;background:#edf5ef;border:2px solid #60816b;padding:8px 0 5px;font-weight:700}
+.embedding-comparison .embedding-comparison-sequence-note{font-size:11px;line-height:1.8;margin:9px 0 17px;color:#657369}
+.embedding-comparison-warning{font-size:12px;line-height:1.85;padding:12px;border:1px solid #ddcda6;border-radius:4px;background:#fffaf0;color:#745c31}
+.embedding-comparison-meta{display:flex;flex-wrap:wrap;gap:7px 17px;font-size:11px;line-height:1.8;padding:12px 0;border-top:1px solid #e0e5e1;border-bottom:1px solid #e0e5e1;color:#516157;font-variant-numeric:tabular-nums}
+.embedding-comparison-legend{display:flex;flex-wrap:wrap;gap:10px 22px;margin:17px 0 9px;font-size:12px;line-height:1.7}
+.embedding-comparison-legend>span{display:flex;align-items:center;gap:8px}
+.embedding-comparison-key{display:inline-block;width:9px;height:9px;border:2px solid #3c654c;background:#3c654c;border-radius:50%;flex:none}
+.embedding-comparison-key.last{background:#fff;border-color:#677482;border-radius:0}
+.embedding-comparison .embedding-comparison-scale-note{font-size:11px;line-height:1.9;margin:0 0 16px;color:#59695f}
+.embedding-comparison-panels{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px}
+.embedding-comparison-panel{min-width:0;border:1px solid #dce4de;border-radius:5px;padding:15px 12px;background:#fff}
+.embedding-comparison-panel.embedding-comparison-sum{background:#f6faf7;border-color:#afc5b5}
+.embedding-comparison-panel-heading{display:flex;gap:9px;align-items:flex-start;min-height:62px;margin-bottom:12px}
+.embedding-comparison-operator{font:23px/1.35 var(--mono);font-weight:400;flex:none;color:var(--green)}
+.embedding-comparison-panel h4{font-size:13px;line-height:1.6;font-weight:600;margin:0 0 3px}
+.embedding-comparison-panel-heading p{font-size:10px;line-height:1.7;margin:0;color:#5c6f62;letter-spacing:.01em}
+.embedding-comparison-axis{display:flex;justify-content:space-between;border-bottom:1px solid #c9d4cb;position:relative;padding:0 0 5px;margin:0 66px 12px 20px;font:10px/1.5 var(--mono);color:#5c6b60}
+.embedding-comparison-axis>span:nth-child(2){position:absolute;left:50%;transform:translateX(-50%)}
+.embedding-comparison-coordinates{list-style:none;padding:0;margin:0;display:grid;gap:15px}
+.embedding-comparison-dimension{display:block;font-size:11px;line-height:1.7;margin-bottom:5px;color:#55655b}
+.embedding-comparison-value{display:grid;grid-template-columns:15px minmax(0,1fr) 61px;gap:5px;align-items:center;min-height:25px}
+.embedding-comparison-position-label{font:10px/1.5 var(--mono);color:#607166}
+.embedding-comparison-track{height:18px;position:relative;display:block;background:linear-gradient(to right,transparent 0,transparent calc(50% - .5px),#a1b2a7 calc(50% - .5px),#a1b2a7 calc(50% + .5px),transparent calc(50% + .5px));border-left:1px solid #e0e7e2;border-right:1px solid #e0e7e2}
+.embedding-comparison-bar{position:absolute;height:4px;top:7px;background:#477457}
+.embedding-comparison-point{position:absolute;top:5px;width:8px;height:8px;border:1px solid #3c654c;border-radius:50%;background:#3c654c;transform:translateX(-50%)}
+.embedding-comparison-position-7 .embedding-comparison-bar{height:0;top:9px;border-top:2px dashed #6c7986;background:none}
+.embedding-comparison-position-7 .embedding-comparison-point{border:2px solid #677482;background:#fff;border-radius:0}
+.embedding-comparison-number{font:11px/1.5 var(--mono);text-align:right;white-space:nowrap;color:#334c3c;font-variant-numeric:tabular-nums}
+.embedding-comparison-position-7 .embedding-comparison-number{color:#52606e}
+.embedding-comparison .embedding-comparison-rounding{font-size:11px;line-height:1.85;margin:14px 0 18px;color:#657369}
+.embedding-comparison-boundary{padding:14px 15px;border-left:3px solid #81998a;background:#f4f7f4}
+.embedding-comparison-boundary strong{display:block;font-size:12px;line-height:1.8;font-weight:600}
+.embedding-comparison-boundary p{font-size:12px;line-height:1.85;margin:6px 0 0;color:#56665c}
+@media(max-width:560px){.embedding-comparison{padding-top:20px}.embedding-comparison figcaption h3{font-size:17px}.embedding-comparison-panels{grid-template-columns:1fr}.embedding-comparison-panel{padding:15px 12px}.embedding-comparison-panel-heading{min-height:0;margin-bottom:15px}.embedding-comparison-panel h4{font-size:14px}.embedding-comparison-panel-heading p{font-size:11px}.embedding-comparison-coordinates{gap:12px}.embedding-comparison-sequence{gap:3px}.embedding-comparison-sequence code{font-size:13px}.embedding-comparison-boundary{padding:13px 11px}}
+@media(forced-colors:active){.embedding-comparison-point,.embedding-comparison-key{background:CanvasText;border-color:CanvasText}.embedding-comparison-position-7 .embedding-comparison-point,.embedding-comparison-key.last{background:Canvas;border-color:CanvasText}.embedding-comparison-bar{background:CanvasText}.embedding-comparison-track{border-left-color:GrayText;border-right-color:GrayText}.embedding-comparison-track:after{content:'';position:absolute;left:50%;top:0;bottom:0;border-left:1px solid GrayText}}

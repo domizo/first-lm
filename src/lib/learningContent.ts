@@ -538,8 +538,8 @@ export const chapters: Array<{
       "ja": "実際に続いた文字へ高い確率を与えると、損失は小さくなります。言葉に関する能力を何でも測れる点数ではありません。"
     },
     "observe": {
-      "en": "Both guesses are checked against t. Which gives t more probability, and which has less loss?",
-      "ja": "どちらも答えは t です。t の確率が高いのはどちら？ 損失が小さいのはどちら？"
+      "en": "Move the chance given to t from 20% toward 70%. What happens to the point and the loss?",
+      "ja": "t の確率を20%から70%へ近づけると、点と損失はどう動くでしょう？"
     },
     "glossary": [
       {
